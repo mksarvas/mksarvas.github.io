@@ -1,8 +1,10 @@
 body {
-    background-color: rgb(212, 198, 154);
+    background-color: rgba(244, 227, 216, 0.936);
+    font-family: Garamond, serif;
+    margin-left: 20px;
   }
   h1 {
-    color: rgb(250, 245, 245);
+    color: rgb(234, 144, 42);
   }
   p {
     color: rgb(12, 12, 12);
