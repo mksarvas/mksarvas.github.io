@@ -2,10 +2,14 @@ body {
     background-color: rgba(244, 227, 216, 0.936);
     font-family: Garamond, serif;
     margin-left: 20px;
+    text-align: center;
   }
   h1 {
-    color: rgb(234, 144, 42);
+   
+    text-shadow: 1px 1px;
   }
   p {
     color: rgb(12, 12, 12);
+    margin-left: 20px;
+    text-align: left;
   }
