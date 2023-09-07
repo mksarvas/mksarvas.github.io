@@ -1,16 +1,27 @@
 body {
-    background-color: rgba(244, 227, 216, 0.936);
+    background-color: rgba(248, 227, 213, 0.936);
     font-family: Garamond, serif;
     margin-left: 20px;
     text-align: center;
   }
   h1 {
-   
+    font-family: 'Henny Penny', cursive;
     text-shadow: 1px 1px;
     color: rgb(122, 121, 120);
   }
   p {
+    font-family: 'Caveat', cursive;
     color: rgb(12, 12, 12);
     margin-left: 20px;
     text-align: left;
-  }
+}
+
+  @import
+  url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Pacifico&famil
+  y=Ubuntu&display=swap');
+  @import 
+  url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+  @import 
+  url('https://fonts.googleapis.com/css2?family=Arbutus:wght@600&display=swap');
+
+  
