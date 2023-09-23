@@ -1,27 +1,129 @@
+ort url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+ 
+
 body {
-    background-color: rgba(248, 227, 213, 0.936);
+    
     font-family: Garamond, serif;
     margin-left: 20px;
     text-align: center;
+ }
+ .lomake  {
+  background-color: lightgray;
+  color: blue;
+  padding: 20px;
+  border-radius: 10%;
+}
+
+ /* Navivalikon tyyli */
+ .navi{
+  float: left;
+  width: 30%;     
+ }
+ .navi > div { 
+  margin: 10px;       
+}     
+ .main{
+  
+  margin-left: 32%;
+  margin-right: 10%;
+ }
+
+ /* Näytön koon muuttaminen vaihtaa väriä */
+
+@media only screen and (max-width:420px) {
+body{
+  background-color:lightgreen
+}
+  a {
+    font-size: x-small;
   }
-  h1 {
-    font-family: 'Henny Penny', cursive;
+}
+
+@media only screen and (min-width: 421px) and
+(max-width: 1024px){
+body{
+  background-color: lightyellow}
+}
+
+@media only screen and (min-width:1024px){
+body {
+  background-color:rgb(246, 240, 240, 0.936);
+}
+ 
+}
+   
+h1 
+    font-family: 'Pacifico';
     text-shadow: 1px 1px;
     color: rgb(122, 121, 120);
   }
-  p {
-    font-family: 'Caveat', cursive;
-    color: rgb(12, 12, 12);
-    margin-left: 20px;
-    text-align: left;
+   
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+} 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-  @import
-  url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Pacifico&famil
-  y=Ubuntu&display=swap');
-  @import 
-  url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
-  @import 
-  url('https://fonts.googleapis.com/css2?family=Arbutus:wght@600&display=swap');
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 
-  
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.button-72 {
+  width:100%;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a/* :visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color:pink;
+  background-color: transparent;
+  text-decoration: underline;
+}
+*/
+
+
+ 
