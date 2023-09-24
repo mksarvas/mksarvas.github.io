@@ -8,8 +8,81 @@
     <meta name="keywords" content="Sarvas, It Teacher, Inspiring">
     <meta name="description" content="Inspiring teacher, Customer solution specialist, Self-employed consult - Programming, Web solutions, Project Management">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">      
-</head>
-<!- Sivu NAVI-> 
+
+ <style> 
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 60%;
+  margin-top: 10%;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+</style>
+  </head>
+<body></body>
+
 <div> 
     <aside class="navi"> 
       <div>
@@ -25,9 +98,8 @@
                 <a href="button.html"><button role="link" class="button-72">Button</button></a>
             </div> 
       
-  </aside>   
+  </aside>  
+    
+  <a href="https://getcssscan.com/css-buttons-examples" target="_blank"><button class="button-85" role="link" style="width:50%; margin-left:40px;"> Hienoja nappeja</button></a>
 
-<article class="main">
- 
-<button class="button-72" role="button"><a href="kuva ja responsiivisuus.htm" style="color: #FFFFFF;">Nappi</a></button>
-</article>
+</div> 

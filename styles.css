@@ -7,6 +7,18 @@ body {
     margin-left: 20px;
     text-align: center;
  }
+
+ h1 {
+  font-family: 'Pacifico';
+  text-shadow: 1px 1px;
+  color: rgb(122, 121, 120);
+}
+img	{
+  max-width:300px;
+  width:100%}
+  
+
+ /* LOMAKKE */
  .lomake  {
   background-color: lightgray;
   color: blue;
@@ -14,21 +26,20 @@ body {
   border-radius: 10%;
 }
 
- /* Navivalikon tyyli */
+ /* NAVIVALIKKO VASEN*/
  .navi{
   float: left;
-  width: 30%;     
+  width: 30%;   
  }
  .navi > div { 
   margin: 10px;       
 }     
- .main{
-  
+ .main{  
   margin-left: 32%;
   margin-right: 10%;
  }
 
- /* Näytön koon muuttaminen vaihtaa väriä */
+ /* NÄYTÖN MUKAUTUMINEN KOKOON */
 
 @media only screen and (max-width:420px) {
 body{
@@ -48,22 +59,10 @@ body{
 @media only screen and (min-width:1024px){
 body {
   background-color:rgb(246, 240, 240, 0.936);
-}
- 
-}
-   
-h1 
-    font-family: 'Pacifico';
-    text-shadow: 1px 1px;
-    color: rgb(122, 121, 120);
-  }
-   
-#myHeader {
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-  text-align: center;
 } 
+}
+  
+/* TAULUKKO */
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -104,9 +103,11 @@ tr:nth-child(even) {
   text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
+  touc
+  ical-align: baseline;
 }
+
+/* LINKKI */
 a {
   color: white;
   background-color: transparent;
@@ -124,6 +125,27 @@ a:hover {
   text-decoration: underline;
 }
 */
+/* GALLERIA 
 
 
- 
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+*/

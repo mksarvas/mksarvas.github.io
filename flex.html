@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.flex-item-left {
+  color: white;
+  background-color: #f892bb;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {    
+  color: white;
+  background-color: rgb(243, 55, 224);
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container" style="float:left;">
+    <div>
+        <a href="etusivu.html"><button role="link" class="button-72">Home</button></a>
+      </div>        
+          <div>
+            <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
+          </div>
+              <div>
+                <a href="lomake.html"><button role="link" class="button-72"> Form</button></a>
+              </div>
+              <div>
+                <a href="button.html"><button role="link" class="button-72">Button</button></a>
+            </div> 
+</div>
+</div>
+
+<article> 
+<br>
+<br>
+<br>
+<h1>Responsive Flexbox</h1>
+
+<p>In this example, we change the percentage of flex to create different layouts for different screen sizes.</p>
+<p><b>Resize the browser window to see that the direction changes when the 
+screen size is 800px or smaller.</b></p>
+
+
+<div class="flex-item-left">1</div>
+<div class="flex-item-right">2</div>
+
+</article>
+</body>
+</html>
