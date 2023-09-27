@@ -1,8 +1,8 @@
 ort url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
  
+/* YLEINEN TYYLI - KOKO SIVUSTON KATTAVA */
 
-body {
-    
+body {    
     font-family: Garamond, serif;
     margin-left: 20px;
     text-align: center;
@@ -19,6 +19,7 @@ img	{
   
 
  /* LOMAKKE */
+
  .lomake  {
   background-color: lightgray;
   color: blue;
@@ -63,6 +64,7 @@ body {
 }
   
 /* TAULUKKO */
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -78,6 +80,8 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+/* PAINIKE
 
 .button-72 {
   width:100%;
@@ -108,12 +112,13 @@ tr:nth-child(even) {
 }
 
 /* LINKKI */
+
 a {
   color: white;
   background-color: transparent;
   text-decoration: none;
 }
-a/* :visited {
+/* :visited {
   color: white;
   background-color: transparent;
   text-decoration: none;
@@ -123,29 +128,5 @@ a:hover {
   color:pink;
   background-color: transparent;
   text-decoration: underline;
-}
-*/
-/* GALLERIA 
-
-
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
 }
 */
