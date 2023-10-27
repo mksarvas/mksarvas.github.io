@@ -17,6 +17,11 @@ img	{
   max-width:300px;
   width:100%}
   
+.img_f {
+    float:left;
+    padding: 10px;
+  }
+  
 
  /* LOMAKKE */
 

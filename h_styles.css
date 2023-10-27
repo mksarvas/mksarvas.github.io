@@ -1,0 +1,41 @@
+/* YLEINEN TYYLI - KOKO SIVUSTON KATTAVA */
+
+body {    
+    font-family: Garamond, serif;
+    margin-left: 20px;
+    text-align: center;
+ }
+
+ h1 {
+  font-family: 'Pacifico';
+  text-shadow: 1px 1px;
+  color: rgb(122, 121, 120);
+}
+img	{
+  max-width:200px;
+  width:100%}
+  
+.img_f {
+    float:left;
+    padding: 10px;
+  }
+  
+.aside {
+    float: left;
+    width: 30%;   
+}
+.article {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 31%;  
+}
+.navi {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+}
+     
+   
+
+
