@@ -1,0 +1,161 @@
+/* YLEINEN TYYLI - KOKO SIVUSTON KATTAVA */
+
+body {    
+    font-family: Garamond, serif;
+    margin-left: 20px;
+    text-align: center;
+ }
+ h1 {
+  font-family: 'Pacifico';
+  text-shadow: 1px 1px;
+  color: rgb(122, 121, 120);
+}
+img	{
+  max-width:300px;
+  width:100%
+}
+  
+.img_f {
+    float:left;
+    padding: 10px;
+  }
+  
+
+ /* LOMAKKE */
+
+ .lomake  {
+  background-color: lightgray;
+  color: blue;
+  padding: 20px;
+  border-radius: 10%;
+}
+
+ /* NAVIVALIKKO VASEN*/
+ .navi{
+  float: left;
+  width: 30%;   
+ }
+ .navi > div { 
+  margin: 10px;       
+}     
+ .main{  
+  margin-left: 32%;
+  margin-right: 10%;
+ }
+/* BOOTSRAP NAVU VÄRIT */
+
+ /* taustan väri */
+ .navbar-custom {
+  background-color: rgba(22, 134, 219, 0.9);
+}
+
+/* brandin ja tekstin väri */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+  color:#FFFFFF;
+}
+
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+  color:#FFFFFF;;
+}
+
+/* aktiivisen & hover-linkin väri */
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #ffffff;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+ /* NÄYTÖN MUKAUTUMINEN KOKOON */
+
+@media only screen and (max-width:420px) {
+body{
+  background-color:lightgreen;
+}
+  a {
+    font-size: x-small;
+  }
+}
+
+@media only screen and (min-width: 421px) and
+(max-width: 1024px){
+body{
+  background-color: lightyellow}
+}
+
+@media only screen and (min-width:1024px){
+body {
+  background-color:rgb(246, 240, 240, 0.936);
+} 
+}
+  
+/* TAULUKKO */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* PAINIKE */
+
+.button-72 {
+  width:100%;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+ }
+
+/* LINKKI */
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+/* a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color:pink;
+  background-color: transparent;
+  text-decoration: underline;
+}
+*/
