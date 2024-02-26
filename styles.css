@@ -18,19 +18,16 @@
   color: rgb(122, 121, 120);
 }
 
-.main img	{
-  max-width:300px;
+.main img	{ 
   width:100%
 }
 
-/* KUVIEN TYYLI */
+/* KELLUVA KUVAN TYYLI */
   
 .img_f {
     float:left;
-    padding: 60px;
-  }
-
-  
+    padding: 10px;
+  }  
   
 
  /* LOMAKKE */

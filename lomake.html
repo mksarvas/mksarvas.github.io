@@ -11,25 +11,52 @@
  
 </head>
 <body>
-<div>
   <!- Sivu NAVI-> 
-<div> 
   <aside class="navi"> 
     <div>
       <a href="index.html"><button role="link" class="button-72">Home</button></a>
     </div>        
-        <div>
-          <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
-        </div>
-            <div>
-              <a href="lomake.html"><button role="link" class="button-72"> Form</button></a>
-            </div>
-            <div>
-              <a href="button.html"><button role="link" class="button-72">Button</button></a>
-          </div> 
-    
-</aside>   
-    <article class="main">
+    <div>
+      <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
+    </div>
+    <div>
+      <a href="lomake.html"><button role="link" class="button-72">Form</button></a>
+    </div>
+    <div>
+      <a href="button.html"><button role="link" class="button-72">Button</button></a>
+    </div> 
+    <div>
+      <a href="animaatio.html"><button role="link" class="button-72">Anim</button></a>
+    </div>    
+  </aside> 
+
+<article class="main">
+<h1>Esimerkki lomakkeesta</h1>
+
+<p>Tälläs sivulla on esimerkki lomakkeesta joka tyyli on määritelty CSS:ssä. Lomaketta ei kuitenkaan voi toteuttaa pelkästään HTML:llä, koska sen täyttämisen jälkeen tarvitaan jokin toiminta joka käsittelee data mikä lomakkeelle syötetään. Yleensä tähän käytetään JavaScriptiä. </p>
+<p>Myös jokin paikka minne lomakkeella saadut tieto tallennetaan olisi hyvä olla, vaikka tietokanta. Tähänä taas tarvimme jonkin rajapinnan minkä kautta keskustella teitokannan kanssa. </p>
+
+<h2>Lomakkeen tyyli </h2>
+
+<xmp>
+  .lomake  {
+    background-color: lightgray;
+    color: blue;
+    padding: 20px;
+    border-radius: 10%;
+  }
+  
+   /* NAVIVALIKKO VASEN*/
+   .navi{
+    float: left;
+    width: 30%;   
+   }
+   .navi > div { 
+    margin: 10px;       
+  }     
+  
+</xmp>
+
 <div class="lomake">
 <form>
         <label for="fname">First name:</label><br>

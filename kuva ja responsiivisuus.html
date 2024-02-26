@@ -10,72 +10,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <style>    
      
-.img_f {
-  float:left;
-  padding: 10px;
-}
+     
 </style>
 </head>
-<body>     
-  <div> 
+<body> 
+
+  <!- Sivu NAVI-> 
   <aside class="navi"> 
     <div>
       <a href="index.html"><button role="link" class="button-72">Home</button></a>
     </div>        
-        <div>
-          <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
-        </div>
-            <div>
-              <a href="lomake.html"><button role="link" class="button-72"> Form</button></a>
-            </div>
-            <div>
-              <a href="button.html"><button role="link" class="button-72">Button</button></a>
-          </div> 
-    
-</aside>   
-<article class="main">
-<picture>      
-    <img src="ai-generated-8277268_1920.jpg">
-</picture>   
+    <div>
+      <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
+    </div>
+    <div>
+      <a href="lomake.html"><button role="link" class="button-72">Form</button></a>
+    </div>
+    <div>
+      <a href="button.html"><button role="link" class="button-72">Button</button></a>
+    </div> 
+    <div>
+      <a href="animaatio.html"><button role="link" class="button-72">Anim</button></a>
+    </div>    
+  </aside> 
 
-<h2>Float Right</h2>
+  <article class="main">
+    <h1> Kuva ja sen asettelu tekstin kanssa responsiivisesti</h1>
 
-<p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+    <figure>      
+      <img src="ai-generated-8188708_640.jpg" alt="jokimaisema kesällä">
+      <figcaption> Tämä kuva ja kuvateksti on tehty <i>figure</i> ja <i>figcaption</i> tagien avulla</figcaption></i></figcaption>
+    </figure>   
 
-
-<p><img class="img_f" src="woman-8177946_640.jpg" style="width:50%;">
+ Tällä sivulla demotaan miten kuvan saa aseteltua tekstin kanssa. Ensimmäinen kuva on liitetty pelkällä  img-tagilla.
+  Toisen kuvan kanssa on käytetty img-f-luokkaa, joka määrittelee kuvan kellumaan tekstin  vasemmalla puolella
+  <xmp>
+    .img_f {
+      float:left;
+      padding: 10px;
+    }
+  </xmp>
+<p><img class="img_f" src="woman-8177946_640.jpg" style="width:50%;" alt="intiaaninainen">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>   
-
+</p>
+</article>
+  </div>
+</body> 
  
-<p>
-<h1>The flex-direction Property</h1>
-
-The "flex-direction: column;" stacks the flex items vertically (from top to bottom):</p>
-<p style="float:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>   
-</p>
-<section>
-
-<div class="flex-container" style="float:left;">
-  <div>
-    <button class="button-72" role="button"><a href="kuva ja responsiivisuus.html" style="color: #FFFFFF;">Responsive</a></button>
-  </div>
-  <div>
-    <button class="button-72" role="button"><a href="lomake.html" style="color: #FFFFFF;">Form</a></button>
-  </div>
-  <div>
-    <button class="button-72" role="button"><a href="button.html" style="color: #FFFFFF;">Button</a></button>
-</div>
-<p style="float:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>   
-</p>
-
-
-<p><img class="img_f" src="woman-8177946_640.jpg" alt="Pineapple" style="width:15%;margin-left:15px;">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>   
-</article>  
-</div> 
-</body>
-</html>
+ 
