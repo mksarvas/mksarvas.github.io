@@ -1,25 +1,36 @@
 /* YLEINEN TYYLI - KOKO SIVUSTON KATTAVA */
 
-body {    
+/* LEIPÄTEKSIN TYYLI */
+
+.main{  
+  margin-left: 32%;
+  margin-right: 10%;
+ }
+ .main body {    
     font-family: Garamond, serif;
-    margin-left: 20px;
-    text-align: center;
+    margin-left: 25px;
     background-color: aqua;
  }
- h1 {
+ 
+.main h1 {
   font-family: 'Pacifico';
   text-shadow: 1px 1px;
   color: rgb(122, 121, 120);
 }
-img	{
+
+.main img	{
   max-width:300px;
   width:100%
 }
+
+/* KUVIEN TYYLI */
   
 .img_f {
     float:left;
-    padding: 10px;
+    padding: 60px;
   }
+
+  
   
 
  /* LOMAKKE */
@@ -39,11 +50,9 @@ img	{
  .navi > div { 
   margin: 10px;       
 }     
- .main{  
-  margin-left: 32%;
-  margin-right: 10%;
- }
-/* BOOTSRAP NAVU VÄRIT */
+
+ 
+/* BOOTSRAP NAVi VÄRIT */
 
  /* taustan väri */
  .navbar-custom {

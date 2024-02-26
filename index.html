@@ -14,34 +14,112 @@
 </head>
 
 
-<body style="margin: 0px;">
-<div>
+<body>
 <!- Sivu NAVI-> 
-<div> 
-    <aside class="navi"> 
-      <div>
-        <a href="index.html"><button role="link" class="button-72">Home</button></a>
-      </div>        
-          <div>
-            <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
-          </div>
-              <div>
-                <button onclick="lomake.html" role="link" class="button-72"> Form</button></a>
-              </div>
-              <div>
-                <a href="button.html"><button role="link" class="button-72">Button</button></a>
-            </div> 
-            <div>
-              <a href="animaatio.html"><button role="link" class="button-72">Anim</button></a>
-          </div> 
-      
-  </aside>   
+  <aside class="navi"> 
+    <div>
+      <a href="index.html"><button role="link" class="button-72">Home</button></a>
+    </div>        
+    <div>
+      <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
+    </div>
+    <div>
+      <button onclick="lomake.html" role="link" class="button-72"> Form</button></a>
+    </div>
+    <div>
+      <a href="button.html"><button role="link" class="button-72">Button</button></a>
+    </div> 
+    <div>
+      <a href="animaatio.html"><button role="link" class="button-72">Anim</button></a>
+    </div>    
+  </aside> 
+
 
 <article class="main">
-<h1> The first page </h1>
+<h1> Aloitus sivu, eli index.html </h1>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p> 
+<p>Nämä sivut on tehty esimerkiksi Haaga-Helian kurssille Johdatus Digitaalisiin Palveluihi, jossa opetellaan palvelumuotoilun ja suunnittelun lisäksi kirjoittamaan HTML-koodia sekä siihen liitettävää css:ää. Nämä sivut keskittyvät HTML ja CSS esimerkkeihin.
+Tämä sivu on toteutettu jakamalla sivu kaheen semaattiseen osioon <i>aside</i>, joka sisältää responsiivisen navigaation - ja <i>article</i> joka on itse leipäteksti ja muu joka sivuilla muuttuva sisältö.
+</p>
+
+<h2> Navigaatio</h2>
+
+<p>Navigaation on toteutettu  navi-luokan tyylillä.</p>
+<xmp style="text-align: left; margin: 40px;">.navi{ 
+  float: left;
+  width: 30%;  
+} 
+
+.navi > div { 
+  margin: 10px;   
+ }   <br>
+</xmp>
+Linkkeinä eri sivuille on käytetty muotoiltuja  painikkeita. Muotoilu on haettu sivulta Buttons sivulta löytyvän “Heinoja nappeja” linkin takaa löytyvästä sivusta.
+Navigaatiopainikkeiden teksti pienenee kun näyttö pienenee, jotta ne pysyvät painikkeiden sisällä.
+<xmp>
+ <aside class="navi">
+    <div>
+      <a href="index.html"><button role="link" class="button-72">Home</button></a>
+    </div>        
+    <div>
+      <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
+    </div>
+    <div>
+      <button onclick="lomake.html" role="link" class="button-72"> Form</button></a>
+    </div>
+    <div>
+      <a href="button.html"><button role="link" class="button-72">Button</button></a>
+    </div>
+    <div>
+      <a href="animaatio.html"><button role="link" class="button-72">Anim</button></a>
+    </div>
+  </aside>   
+</xmp>
+
+<h2>Leipäteksti</h2>
+
+<p></p>Teksti on kirjoitettu <i>article</i>-tagiin. HTML-koodi on saatu näkymään <i>xmp</i>-tägin avulla,
+Tyyli on määritelty main-luokalla.</p>
+
+Navigaation aside-osiollo on varttay 32% sivun leveydestä. </p>
+<xmp>
+.main{  
+  margin-left: 32%;
+  margin-right: 10%;
+ }
+
+ .main body {    
+    font-family: Garamond, serif;
+    margin-left: 25px;
+    background-color: aqua;
+ }
+ 
+.main h1 {
+  font-family: 'Pacifico';
+  text-shadow: 1px 1px;
+  color: rgb(122, 121, 120);
+}
+
+
+.main img {
+  max-width:300px;
+  width:100%
+}
+
+
+</xmp>
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.7360397111702!2d24.931236876526878!3d60.20165114089331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469208606a60874b%3A0x50a651a72fbb180b!2sHaaga-Helia%20ammattikorkeakoulu!5e0!3m2!1sfi!2sfi!4v1695901156812!5m2!1sfi!2sfi" width="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
 
