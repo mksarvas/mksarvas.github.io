@@ -28,7 +28,18 @@
     float:left;
     padding: 10px;
   }  
-  
+/* FLEX CONTARINER */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.felx-item {
+  flex: 1;
+  margin-right: 5px;
+}
 
  /* LOMAKKE */
 
@@ -84,9 +95,10 @@
 body{
   background-color:lightgreen;
 }
-  a {
-    font-size: x-small;
-  }
+.button-72 {
+  font-size: xx-small;
+  color:aqua;
+}
 }
 
 @media only screen and (min-width: 421px) and
