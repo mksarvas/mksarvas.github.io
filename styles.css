@@ -167,7 +167,7 @@ a {
   background-color: transparent;
   text-decoration: none;
 }
-/* a:visited {
+a:visited {
   color: white;
   background-color: transparent;
   text-decoration: none;
@@ -178,4 +178,12 @@ a:hover {
   background-color: transparent;
   text-decoration: underline;
 }
-*/
+
+ 
+
+.kode-mono-mks{
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
