@@ -6,10 +6,16 @@
   margin-left: 32%;
   margin-right: 10%;
  }
- .main body {    
-    font-family: Garamond, serif;
-    margin-left: 25px;
-    background-color: aqua;
+ .main body {   
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; 
+  
+  margin-left: 25px;
+  background-color: aqua;
+  font-family: "Kode Mono", monospace;
+  
  }
  
 .main h1 {
