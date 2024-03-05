@@ -1,0 +1,357 @@
+<!DOCTYPE html>     
+<html lang="fi">
+<head>
+<style>
+    body {color:black;
+    background-color: white;
+    margin: 0;}
+
+p {font-family: 'Outfit';
+    padding: 1%;
+    margin-left: 4%;
+    overflow: hidden;}
+
+h1, h2, h3, h4, h5 {font-family: 'Unbounded';
+                    display: block;}
+
+header {color: black;
+        background-color: #F1E6DA;
+        font-family: 'Unbounded';}
+
+footer {color: black;
+        background-color: #F1E6DA;}
+
+    .container {
+        position: relative;
+        width: 100%;
+        height:100px; /* Vie koko näytön korkeuden */
+
+    }
+    .vasen-yla {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px; /* Määrittele kuvan leveys */
+        height: auto; /* Säilytä alkuperäinen kuvasuhde */
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    .oikea-yla {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        z-index: 1000; /* Määrittelee kerroksen, jotta se näkyy muiden elementtien päällä */
+        font-size: 24px; /* Määrittelee kuvakkeen koon */
+    }
+
+    .navbar ul{
+        list-style-type: none;
+        background-color: #F1E6DA;
+        padding: 5px;
+        margin: 0px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar a{
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+        font-size: small;
+        border-radius: 20px 20px;
+    }
+
+    .navbar a:hover{
+        background-color: black;
+        color: white;
+        border-radius: 20px 20px;
+    }
+
+    .navbar li{
+        float: left;
+    }
+
+    #mainMenu {
+        display: none;
+    }
+    
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 20px;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .text-overlay h2 {
+        margin-bottom: 10px;
+    }
+    
+    .text-overlay h2 {
+        margin-bottom: 10px;
+        font-size: auto;
+    }    
+
+    .image-text-container {
+        display: flex;
+        align-items: left;
+    }
+
+    .tianshu-liu {
+        position: relative;
+    }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.vierityskuvat {
+    display: flex;
+    overflow-x: auto; /* Horisontaalinen vieritys */
+    width: auto;
+}
+
+.bar {
+    flex: 0 0 auto;
+    width: 170px;
+    height: 200px; /* Muuta tarvittaessa */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-right: 10px; /* Lisää tarvittaessa väliä palkkien välille */
+    border-radius: 20px;
+    margin-left: 5%;
+}
+
+.bar:last-child {
+    margin-right: 0; /* Poista marginaali viimeiseltä palkilta */
+}
+
+.link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Unbounded";
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+    font-size: x-large;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*mobiili*/
+
+@media only screen and (max-width:430px)
+    {
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+h3 {
+    margin-left: 5%;
+}
+    }
+
+/*keskikokoiset*/
+
+@media only screen and (min-width:431px)
+    {
+.flex_container {display:flex}
+.flex_item{
+    flex:1;
+    margin: 10px;
+    padding: 10px;}
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+       }
+    }
+
+/*isot näytöt*/
+
+@media only screen and (min-width:1024px)
+    {
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+            float: left;
+            flex: 0 0 auto;
+            margin-right: 20px; /* Lisää tarvittaessa väliä kuvan ja tekstin välille */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: nowrap; /* Estää rivikäärymistä */
+            overflow-x: auto;
+        }
+        
+        .content {
+            flex: 1;
+        }
+        
+        h3 {
+            clear: right;}
+
+        .vierityskuvat {
+            display: flex;
+            position: relative;
+            margin-left: 52%;
+        }
+
+        .suunnittelematka {
+            display: block;
+            margin-top: 25%;
+            
+        }
+
+        .suunnittelematka h3 {
+            margin-left: 3%;
+        }
+
+        .suunnittelematka p {
+            margin-left: 2%;
+        }
+
+        .flex_container {display:flex}
+        .flex_item{
+            flex:1;
+            margin: 10px;
+            padding: 10px;}
+
+        }
+</style>
+
+<title>NipponExplorer - Etusivu</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+<link href="NE_tyyli.css" rel="stylesheet" type="text/css">
+
+<script src="https://kit.fontawesome.com/c6ef086cae.js" crossorigin="anonymous"></script>
+<script src="script.js" defer></script>
+
+</head>
+<body> 
+
+<header>
+    
+        <div class="container">
+            <img src="ai-generated-8131432_1280.png" alt="NipponExplorer logo" class="vasen-yla">
+            <i class="oikea-yla fa-solid fa-bars fa-2xl" id="menuToggle"></i>
+        </div>
+        <nav class="navbar" id="mainMenu">
+            <ul class="menu">
+                <li><a href="NE_etusivu.html">Etusivu</a></li>
+                <li><a href="NE_matkakohteet.html">Matkakohteet</a></li>
+                <li><a href="NE_matkavinkit.html">Matkavinkit</a></li>
+                <li><a href="NE_yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+            
+    
+</header>
+
+<main>       
+    <div class="image-text-container"></div>
+        <div class="image-container">
+            <img src="ai-generated-8131432_1280.png" alt="Kuva japanilaisesta maisemasta" class="tianshu-liu"                style="width: 100%; max-width: 700px; min-height: auto;">
+        </div>
+        <div class="text-overlay">
+            <h2>Koe Japani, jossa menneisyys ja tulevaisuus kohtaavat.</h2>
+        </div>
+    </div>
+       
+    <div class="etusivuninfo">
+        <p>Tervetuloa Japaniin, missä menneisyyden
+            perinteet sekoittuvat tulevaisuuden innovaatioihin
+            luoden ainutlaatuisen kontrastin. Astu matkaan ja
+            koe sekoitus historian tarinoita, kulttuurin
+            kauneutta sekä modernin maailman nähtävyyksiä,
+            jotka odottavat jokaisella kadunkulmalla ja
+            temppeleiden kätköissä.</p>
+    </div>
+
+    <h3>Suosituimmat kohteet</h3>
+
+    <div class="vierityskuvat">
+        <div class="bar" style="background-image: url('takashi-miyazaki-64ajtpEzlYc-unsplash.jpg');">
+            <a href="NE_tokio.html" class="link">TOKIO</a>
+        </div>
+        <div class="bar" style="background-image: url('andreas-rasmussen-GhvpEtG5HMs-unsplash.jpg');">
+            <a href="NE_fuji.html" class="link">FUJI</a>
+        </div>
+        <div class="bar" style="background-image: url('fahrul-azmi-5iPIELR9SAI-unsplash.jpg');">
+            <a href="NE_kioto.html" class="link">KIOTO</a>
+        </div>
+        <div class="bar" style="background-image: url('jo-sorgenfri-4OmQ8pDJ5W0-unsplash.jpg');">
+            <a href="NE_nara.html" class="link">NARA</a>
+        </div>
+    </div>
+        
+</main>
+
+<aricle> 
+        <div class="flex_container">
+            <div class="suunnittelematka">
+        <h3>Suunnittele kymmenen päivän matka Japaniin</h3>
+            <div class="flex_item">
+        <p>Japanissa on paljon nähtävää ja mietit
+            varmaan, miten pystyt näkemään mahdollisimman
+            paljon yhdellä lomakerralla. Tämän
+            matkasuunnitelman avulla pääset suunnittelemaan
+            monipuolisen matkan täynnä erilaisia ja
+            ainutlaatuisia nähtävyyksiä!</p>
+            </div>
+
+            <div class="flex_item">
+            <p>1. ja 2. päivä: Tokio
+            Tokiossa on lukuisia ikonisia nähtävyyksiä, kuten Senso-jin temppeli, Shibuyan risteys, Tokyo Skytree ja keisarillinen palatsi. Ensimmäiset päivät Tokiossa antavat sinulle mahdollisuuden kokea nämä tärkeimmät nähtävyydet ja saada mahdollisimman kattavan näkemyksen Tokiosta!
+            </p>
+            </div>
+        </div>
+    </div>
+</aricle>
+</body>
+
+
