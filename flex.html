@@ -35,6 +35,20 @@
     flex: 100%;
   }
 }
+.button{
+  background-color: black; 
+  width: 100px; 
+  height: 30px;
+  border-radius: 42px;
+  padding: 18px;
+  text-align: center; 
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px; 
+}
 </style>
 </head>
 <body>
@@ -55,19 +69,15 @@
 </div>
 </div>
 
-<article> 
-<br>
-<br>
-<br>
-<h1>Responsive Flexbox</h1>
+<article style="padding-top: 100px;"> 
 
-<p>In this example, we change the percentage of flex to create different layouts for different screen sizes.</p>
-<p><b>Resize the browser window to see that the direction changes when the 
-screen size is 800px or smaller.</b></p>
+<a href="index.html">
+  <button class="button-75">
+    Etusivu
+  </button>
+</a>
+<button class="button-75" role="button"><span class="text">Button 75</span></button>
 
-
-<div class="flex-item-left">1</div>
-<div class="flex-item-right">2</div>
 
 </article>
 </body>
