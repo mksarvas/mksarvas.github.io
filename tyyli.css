@@ -1,0 +1,51 @@
+body{
+    color: blueviolet;
+}
+
+.img_float {
+    width: 50%;
+    max-width: 500px;
+    float: right;
+    padding: 4px;
+}
+.kuvaluokka2{
+    width:80%;
+    max-width:200px;  
+    display: block;
+    margin:auto;  
+}
+
+/* ID:t */
+#h1 {
+    background-color:black;
+    color: azure;
+}
+ .omaluokka {
+    background-color: antiquewhite;
+    color:brown;
+    border-style: dotted;
+    border: 30 px;            
+    border-color: black;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media only screen and (max-width:420px) {
+    body {
+        background-color: beige;
+    }
+}
+@media only screen and (min-width:421px) {
+    body {
+        background-color: lightgrey;
+        ;
+    }
+}
+@media only screen and (min-width:1024px) {
+    body {
+        background-color: lightpink;
+    }
+}
