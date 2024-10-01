@@ -9,11 +9,25 @@ body{
     padding: 4px;
 }
 .kuvaluokka2{
-    width:80%;
     max-width:200px;  
     display: block;
     margin:auto;  
 }
+.flex-container{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+
+}
+
+.flex-container > div {
+    width: 20px;
+    background-color: pink;
+    margin: 5px;
+    justify-content: center;
+}
+
+
 
 /* ID:t */
 #h1 {
@@ -49,3 +63,16 @@ body{
         background-color: lightpink;
     }
 }
+/* .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(180, 255, 30);
+    justify-content: center;
+}
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+  }
