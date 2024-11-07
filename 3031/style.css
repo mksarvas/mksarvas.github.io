@@ -1,0 +1,12 @@
+body {
+    background-color: rgba(50, 205, 50, 0.342);
+    font-family:Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 22px;
+    color: blue ;
+}
+h2{
+    font-size: 20px;
+    color: azure;
+}
