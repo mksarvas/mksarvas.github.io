@@ -21,18 +21,18 @@ table {
     padding: 20px;;
 }
 
-/* Table styöe Classa */
+/* Table styöe Class */
 
 .table-class td, th {
-    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    border: #1A202C;
   }
-  
-  .table-class tr:nth-child(even) {
-    background-color: #dddddd;
+table td, th {
+    text-align:left;
+    padding: 8px;
+    border: #1A202C;
   }
-
 
  /* BUTTON STYLE */
 
@@ -64,11 +64,18 @@ table {
 
 .flex-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: row;
     text-align: center;
     margin-bottom: 30px;
   }
   .felx-item {
     flex: 1;
     margin-right: 5px;
+  }
+
+  .flex-container-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+    
   }
