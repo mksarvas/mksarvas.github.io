@@ -18,7 +18,7 @@
     <nav class="flex-container"> 
         <a href="guide.html" class="button-47 felx-item">Home</a>
         <a href="gresop.html" class="button-47 felx-item">Navi</a>
-        <a href="two.html" class="button-47 felx-item">Two</a>
+        <a href="elem.html" class="button-47 felx-item">Elements</a>
       </nav>   
     <h1>Here is step-by-step guide bulding a web site on the course Digi Intro</h1>
     <ol>
@@ -52,8 +52,8 @@
      <li>Link all your 3 page together by writing the following code into the begginig of each page into a semantic <b>&lt;nav> </b>tag</li>
      <xmp>
         <nav><a href="index.html">INDEX</a> 
-             <a href="one.html">ONE</a> 
-             <a href="two.html">TWO</a>
+             <a href="gresop.html">ONE</a> 
+             <a href="elem.html">Elements</a>
         </nav>
      </xmp>
 <li> Write the right filenames, - your files, where needed. We will work making the navigation look nicer and responsible later.</li>
@@ -68,32 +68,32 @@
 <xmp>
 /* Basic style - to all elements on the page */
 
-/*Text style*/
+    body {  
+        background-color:lightcyan;      
+        font-style: normal;      
+    }
+   
+    h1 {
+        font-family: 'Pacifico';
+        text-shadow: 1px 1px white;
+        color: rgb(122, 121, 120);
+    }
 
-.main{  
-  margin-left: 32%;
-  margin-right: 10%;
- }
-
- .main body {   
-  font-weight: 400;
-  font-style: normal;   
-  margin-left: 25px;
-  background-color:
- }
-
-/*Heading styles */
-
-.main h1 {
-  font-family: 'Pacifico';
-  text-shadow: 1px 1px;
-  color: rgb(122, 121, 120);
-}
-</xmp>    
-<li>Next we will start building a responsive good looking navigation. Go to <a style="color: blue;" href="gresop.html">next page to continue</a></li>
+    h2 {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration:underline;
+        color: blue;
+    }
+</xmp>
+    
+<li>Next we will start building a responsive good looking navigation. Go to Navi page to continue</a></li>
 </ol>
 <footer>
-    <nav "><a  style="color:black" href="index.html">INDEX</a> <a  style="color:black" href="gresop.html">Responsive page</a> <a  style="color:black" href="two.html">TWO</a></nav>
+    <nav class="flex-container"> 
+        <a href="guide.html" class="button-47 felx-item">Home</a>
+        <a href="gresop.html" class="button-47 felx-item">Navi</a>
+        <a href="elem.html" class="button-47 felx-item">Two</a>
+      </nav> 
 </footer>
      
 </body>

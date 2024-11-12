@@ -17,6 +17,23 @@ h2 {
     color: blue;
 }
 
+table {
+    padding: 20px;;
+}
+
+/* Table styöe Classa */
+
+.table-class td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .table-class tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
  /* BUTTON STYLE */
 
   .button-47 {
