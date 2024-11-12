@@ -24,13 +24,15 @@
     <ol>    
         
         <li>
-            <p>Createa an HTML file named <b>index.html</b></p>
+            <p>Create an HTML file named <b>index.html</b></p>
         </li>
         
         <li>
-            Add <b>head</b> and  write  <b>html, head ,body </b>tags into it.            
-            <p><b>TIP</b>: TIP: In VS Code, by typing <b>html:5</b> and pressing enter, you get the starting tags for your HTML document-
+            Add the <b>head</b> and  write  <b>html, head ,body </b>tags into it.            
+            <p><b>TIP</b> In VS Code, by typing <b>html:5</b> and pressing enter, you get the starting tags for your HTML document-
             </p></li> 
+    </ol>
+        <div class="xmp">
         <xmp>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,32 +43,36 @@
 </head>              
 </body>
 </html>
-            </xmp>
-
+</xmp></div>
+<ol start="3">
                         
         <li> <p>Add a <b>title tag</b> to your page. Notice you have the tag already if you did as told in the previous TIP </p>
         </li>        
         
         <li> Write <b>meta keywords</b> and <b>meta description </b> to your page, so that they match the content of your site.
         </li>
+</ol>
+        <div class="xmp">
             <xmp>
 <meta name="keywords" content="Sarvas, It Teacher, Inspiring">
 
 <meta name="description" content="Inspiring teacher, Customer solution specialist, Self-employed consult - Programming, Web solutions, Project Management">  
             </xmp>
-        
+        </div>
+    <ol start="5">
         <li>
             <p>Create the 2 other pages for your site. For example one.html and two.html
             </p>
         </li>
         
         <li>
-            <p>Copy the <b><code>head</code></b> tag and it's content from index.html to the new pages. Change the titles to match the content of the pages.
+            <p>Copy the head tag and its content from index.html to the new pages.
             </p>        
         </li>
         
-        <li>Link all your 3 page together by writing the following code into the begginig of each page into a semantic <b><code>nav</code> </b>tag</li>
-            
+        <li>Link all your 3 pages together by writing the following code into the beginning of each page inside a semantic nav tag</li>
+    </ol>
+    <div class="xmp">
         <xmp>
 <nav>
     <a href="index.html">INDEX</a> 
@@ -74,20 +80,27 @@
     <a href="elem.html">Elements</a>
 </nav>
         </xmp>
-        <li> Write the right filenames, - your files, where needed. We will work making the navigation look nicer and responsible later.</li>
+    </div>
+    <ol start="8">
+        <li>Write the correct filenames for your files where needed. We will work on making the navigation look nicer and responsive later.</li>
     </ol>
     <h2>CSS</h2>
     <ol>
         <li><p>Create a <b>style.css </b>file</p></li>
         
         <li>Link it to all your 3 pages by adding the following line to the head of the file.</li>
-            <xmp>  
+    </ol>        
+    <div class="xmp">
+        <xmp>  
 <link rel="stylesheet" href="styles.css">
-            </xmp>
+        </xmp>
+    </div>
+    <ol start="3">
         <li><p>Add style to your styles.css file. So at least <b>background, headings, text.</b> Below is one example of what it could look like.</li>
         
-        <li>Add comments to your CSS file, so you can easily find where what style  is defined</li>
-        
+        <li>Add comments to your CSS file, so you can easily find where each style is defined.</li>
+    </ol>    
+    <div class="xmp">
         <xmp>
 /* Basic style - to all elements on the page */
 
@@ -108,26 +121,30 @@ h2 {
     color: blue;
     }
 </xmp>
-</ol>
+</div>
+
 <h2>Google Fonts</h2>
 <ol>    
-    <li><p>Currently there are 1739 fonts available at Google. Here us helpo how you can use them.
+    <li><p>Currently there are 1739 fonts available at Google. Here is help on how you can use them.
         </p>
         <ul>
         <b>
             <li><a href="https://fonts.google.com/"> Here a link to Google fonts.</a>
-            <li><a href="https://www.w3schools.com/howto/howto_google_fonts.asp"> Here alink to W3school and list od Google Fonts</a>
+            <li><a href="https://www.w3schools.com/howto/howto_google_fonts.asp"> Here a link to W3school and list od Google Fonts</a>
         </li></b>
         </ul>
         
         <p>Add a link to the font into your <code> head</code> tag and the font-family to body in the style file.
         </p>
-            <xmp>
+    </li>
+</ol>
+<div class="xmp">
+    <xmp>
 The link to the <head>
 
 <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
             
-Define the font family in CSS filen
+Define the font family in CSS file
 
 body {  
    background-color:lightcyan;      
@@ -135,14 +152,8 @@ body {
     /* GOOGLE FONTS */
     font-family: 'Abyssinica SIL';font-size: 16px; 
     }
-        </xmp>
-
-
-    </li>
-
-</ol>
-
-<p>Next we will start building a responsive good looking navigation. Go to Navi page to continue</a></li>
+</xmp>
+</div>
 
 <footer class="flex-container-footer">   
     <table class="table-class flex-item">

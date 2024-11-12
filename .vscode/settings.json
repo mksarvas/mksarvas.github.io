@@ -1,3 +1,12 @@
 {
-    "livePreview.defaultPreviewPath": "/backg.html"
+    "livePreview.defaultPreviewPath": "/backg.html",
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "html"
+    ]
 }
