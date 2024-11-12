@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="gstyle.css">
-    <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
-    <meta lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple HTML Guide </title>
+    <link rel="stylesheet" href="gstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
     <meta name="keywords" content="Sarvas, It Teacher, Inspiring">
     <meta name="description" content="Inspiring teacher, Customer solution specialist, Self-employed consult - Programming, Web solutions, Project Management">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">   
-    <title> My web site - Guide</title>
+
 </head>
 
 <body>
@@ -20,92 +20,91 @@
     <a href="gresop.html" class="button-47 felx-item">Navi</a>
     <a href="elem.html" class="button-47 felx-item">Table, images</a>
   </nav>
-  
-
+  <h2> Add a table</h2>
   <ol>
-    <h2> Add a table</h2>
     <li>
         Now we will add a table to the footer. 
-        Add a empty table into the footer-tag 
-        <xmp>
-            <table>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>        
-            </table> 
-        </xmp>
-    </li>
+        Add a empty table into the footer-tag
+    </li>´
+    <xmp>
+    <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>        
+    </table> 
+    </xmp>
+    
     <li>
         Table rows consist &lt tr> of table hedaer or table data.
         Add text/image/links to the table header &lt th> and table data &lt td> elements.
-        <xmp>
-            <tr>
-            <th>The course</th>        
-          </tr>
-          <tr>
-            <td>Introduction to Digital Services</td>
-        </xmp>
     </li>
+    <xmp>
+<tr>
+    <th>The course</th>        
+</tr>
+<tr>
+    <td>Introduction to Digital Services</td>
+</tr>
+    </xmp>    
     <li>
-        Style your table with borders and align text to the left of the table cell. Here the table is in the footer that has a blue background, so the text color is styled to white.
-        <br><br>
+        <p>Style your table with borders and align text to the left of the table cell. Here the table is in the footer that has a blue background, so the text color is styled to white.
+        </p>
         As we might have tables in other pages on the site, we define class table-class-footr for the table in the footer.
-        <xmp>
-                    
-            .table-class td {
-                color:#FFFFFF;
-                text-align:left;
-                padding: 8px;
-                border: 2px solid lightblue;
-            } 
-            
-            .table-class th{
-                color:#FFFFFF;
-                text-align:left;
-                padding: 8px;
-                border: 2px solid lightblue;
-            } 
-        </xmp>
-        Links are blue as default, so we want to chnge the link color in the class table-style-footer.
-        <xmp>
-            .table-class a {
-                color: #FFFFFF;
-            }
-        </xmp>
     </li>
+    <xmp> 
+    .table-class td {
+        color:#FFFFFF;
+        text-align:left;
+        padding: 8px;
+        border: 2px solid lightblue;
+    } 
+    
+    .table-class th{
+        color:#FFFFFF;
+        text-align:left;
+        padding: 8px;
+        border: 2px solid lightblue;
+    } 
+    </xmp>                
+    
+    Links are blue as default, so we want to chnge the link color in the class table-style-footer.
+    <xmp>
+    .table-class a {
+       color: #FFFFFF;
+       }
+    </xmp>
+    
     <li>
         To make the footer responsive with the table and the Navi we need to make it a flex container.
         We do this by adding .flex-container-footer class to it.
-        <xmp>
-            <footer class="flex-container-footer"> 
-        </xmp>
+    </li>
+    <xmp>
+<footer class="flex-container-footer"> 
+    </xmp>
         In this flex container we want the items felx direction to be horizontal, so that they are always in a colunm.
         It also defines the backgourn color of the footer. Add a new class to your style file. 
         <xmp>
-            .flex-container-footer {
-                display: flex;
-                flex-direction: column;
-                background-color: rgb(13, 92, 172);
-              }
+    .flex-container-footer {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(13, 92, 172);
+        }
         </xmp>
-    </li>
-    <li>
+    
         Now we still need to define the table and Navi as flex items of the outer container by adding flex-item class to them.
-        <xmp>
-            <table class="table-class flex-item">
-            <nav class="flex-container felx-item"> 
+    </li>
+    <xmp>
+<table class="table-class flex-item">
+<nav class="flex-container felx-item"> 
         </xmp>
-    </li>
-    </li>
-
-  </ol>
+</ol>
    
 <hr>
 <footer class="flex-container-footer">   
@@ -118,7 +117,7 @@
         <tr>
           <td>Introduction to Digital Services</td>
           <td><a href="https://hhmoodle.haaga-helia.fi/course/view.php?id=41673&section=6">Link to the course moodle</a></td>
-          <td><a href="https://www.w3schools.com/html/default.asp">W3school HTML Tutorial</a></td></td>
+          <td><a href="https://www.w3schools.com/html/default.asp">W3school HTML Tutorial</a></td>
         </tr>        
     </table>
     <nav class="flex-container felx-item">
