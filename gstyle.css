@@ -23,16 +23,17 @@ table {
 
 /* Table styöe Class */
 
-.table-class td, th {
+table td, th {
     text-align: left;
     padding: 8px;
-    border: #1A202C;
+    border: 0px ;
   }
-table td, th {
+
+.table-class, th, td {
     text-align:left;
     padding: 8px;
-    border: #1A202C;
-  }
+    border:1px solid #1A202C;
+  } 
 
  /* BUTTON STYLE */
 
