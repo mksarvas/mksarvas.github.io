@@ -14,32 +14,56 @@
 </head>
 
 <body>
-    <nav> <button role="button" class="button-72"><a href="index.html"> The Guide - start</a></button>
-          <a  style="color:black" href="one.html">Responsive page</a> <a  style="color:black" href="two.html">TWO</a></nav>
-    <div class="flex-container">
-        <div class="felx-item">
-          <a href="index.html"><button role="link" class="button-72">Home</button></a>
-        </div>        
-        <div class="felx-item">
-          <a href="kuva ja responsiivisuus.html"><button role="link" class="button-72">Image</button></a>
-        </div>
-        <div class="felx-item">
-          <a href="lomake.html"><button role="link" class="button-72"> Form</button></a>
-        </div>
-        <div class="felx-item">
-          <a href="button.html"><button role="link" class="button-72">Button</button></a>
-        </div> 
-        <div class="felx-item">
-          <a href="animaatio.html"><button role="link" class="button-72">Flex&Anim</button></a>
-        </div>             
-      </div> 
+  <nav class="flex-container"> 
+    <a href="index.html" class="button-47 felx-item">Home</a>
+    <a href="one.html" class="button-47 felx-item">Navi</a>
+    <a href="two.html" class="button-47 felx-item">Two</a>
+  </nav>
+
+  <h1> Make your Navi look nice and responsive</h1>
+   
+
     <ol>
-    <li>
-       Start with making your navi-link into buttons. Add a button tag to your links
-       <xmp>
-        <a href="index.html"><button role="link" class="button-72">The guide - start page</button></a>
-       </xmp>
-    </li>
+      <h2>The look of your Navi  - CSS</h2>  
+      <li> Start with making your navi-link into buttons.
+       
+        <p><b>NOTICE</b> HTML tag button is useful when you have JavaScrpt to use. This code is not good for accessibility.  You can read more about it here.
+        </p>
+        <p>Instead we make the link look like a button with CSS. Define a nice looking CSS fro example  clicking the button below or define one yourself.
+        </p>
+
+        <a class="button-47" href="https://getcssscan.com/css-buttons-examples">
+        Button CSS's </a>
+        <p> On the page click the button which style you want. That will copy the CSS. Then paste it to your style-file.</p>
+      </li>
+      <li>Now make a link and style it with the  button style you defined in the previous step. Here as an example the Index link in your Navi.
+        <xmp>
+          <a href="index.html" class="button-47">Home</a>
+        </xmp>
+      </li>
+      <li> Add the same style to the other links in your Navi</li> 
+
+      <h2>Resposive Navi - Felxbox</h2>
+      <li>  a flexcontainer class for your Navi Add the style class to your style file.
+        <xmp>
+          .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-bottom: 30px;
+        }</xmp>
+        
+        Add the class to your Navi.
+        <xmp> <nav class="flex-container"> </xmp>
+      </li>
+      <li> Next add a flex-itme class and style your links in the Navi with it</li>
+        <xmp>
+          .felx-item {
+            flex: 1;
+            margin-right: 5px;
+          }
+        
+        </xmp>
 </ol>
 </body>   
 </html> 
