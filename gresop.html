@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="gstyle.css">
-    <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
-    <meta lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple HTML Guide </title>
+    <link rel="stylesheet" href="gstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
     <meta name="keywords" content="Sarvas, It Teacher, Inspiring">
     <meta name="description" content="Inspiring teacher, Customer solution specialist, Self-employed consult - Programming, Web solutions, Project Management">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">   
-    <title> My web site - Guide</title>
+
 </head>
 
 <body>
@@ -22,95 +22,102 @@
   </nav>  
 
   <h1> Make your Navi look nice and responsive</h1>
-   
-
-    <ol>
-      <h2>The look of your Navi  - CSS</h2>  
-      <li> Start with making your navi-link into buttons.
+  <h2>The look of your Navi  - CSS</h2> 
+  <ol>
+    <h2>The look of your Navi  - CSS</h2>  
+    <li> Start with making your navi-link into buttons.
        
-        <p><b>NOTICE</b> HTML tag button is useful when you have JavaScrpt to use. This code is not good for accessibility.  You can read more about it here.
-        </p>
-        <p>Instead we make the link look like a button with CSS. Define a nice looking CSS fro example  clicking the button below or define one yourself.
-        </p>
+      <p><b>NOTICE</b> HTML tag button is useful when you have JavaScrpt to use. This code is not good for accessibility.  You can read more about it here.
+      </p>
+      <p>Instead we make the link look like a button with CSS. Define a nice looking CSS fro example  clicking the button below or define one yourself.
+      </p>
 
-        <a class="button-47" href="https://getcssscan.com/css-buttons-examples">
-        Button CSS's </a>
-        <p> On the page click the button which style you want. That will copy the CSS. Then paste it to your style-file.</p>
-      </li>
-      <li>Now make a link and style it with the  button style you defined in the previous step. Here as an example the Index link in your Navi.
+      <a class="button-47" href="https://getcssscan.com/css-buttons-examples">
+      Button CSS's </a>
+      <p> On the page click the button which style you want. That will copy the CSS. Then paste it to your style-file.</p>
+    </li>
+    <li>Now make a link and style it with the  button style you defined in the previous step. Here as an example the Index link in your Navi.
+    </li>
         <xmp>
-          <a href="index.html" class="button-47">Home</a>
+<a href="index.html" class="button-47">Home</a>
         </xmp>
       </li>
       <li> Add the same style to the other links in your Navi</li> 
     </ol>
+    <h2>Resposive Navi - Flexbox</h2>
     <ol>
-      <h2>Resposive Navi - Flexbox</h2>
+    
       <li>  a flexcontainer class for your Navi Add the style class to your style file.
-        <xmp>
-          .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            text-align: center;
-            margin-bottom: 30px;
-        }</xmp>
-        
-        Add the class to your Navi.
-        <xmp> <nav class="flex-container"> </xmp>
       </li>
-      <li> Next add a flex-itme class and style your links in the Navi with it</li>
-        <xmp>
-          .felx-item {
-            flex: 1;
-            margin: 5px;
-          }
+      <xmp>
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 30px;
+    }</xmp>
         
+        Add the class to your Navi.</li>
+        <xmp> <nav class="flex-container"> </xmp>
+      
+      <li> Next add a flex-itme class and style your links in the Navi with it</li>
+        </li>  
+      <xmp>
+  .felx-item {
+    flex: 1;
+    margin: 5px;
+  }       
         </xmp>
       </ol>
+      <h2>Different styles for different media types/devices.</h2>
       <ol>
-        <h2>Different styles for different media types/devices.</h2>
-        <li>Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to different devices.
-        <br><br>
-        Here we make the background color change when the viewpoint changes. It is an easy way to see how your code and rule work. Then you can use it for other needed modifications in the style.
-        <br><br>
+        
+        <li><p>Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to different devices.
+            </p>
+            <p>Here we make the background color change when the viewpoint changes. It is an easy way to see how your code and rule work. Then you can use it for other needed modifications in the style.
+            </p>
         <b>NOTICE</b> you might want to remove the changing background color from your final work.
         </li>
-        <br>        
+            
         <li>
-          Add the @media rules to your style file.
-          <xmp>            
-            @media only screen and (min-width: 421px) and
-            (max-width: 1024px){
-            body{
-              background-color: lightyellow}
-            }
-
-            @media only screen and (min-width:1024px){
-            body {
-              background-color:rgba(231, 99, 71, 0.1);
-            } 
-          </xmp>
+          <p></p>Add the @media rules to your style file.</p>
         </li>
+          <xmp>            
+@media only screen and (min-width: 421px) and
+(max-width: 1024px){
+body{
+  background-color: lightyellow}
+  }
+
+@media only screen and (min-width:1024px){
+body {
+  background-color:rgba(231, 99, 71, 0.1);
+   } 
+    </xmp>
+        
         <li>
           Now for practice and better look, let's change the border color of the table to match the background changes with the viewpoint. Add a new lines to each media rule.
+        </li>
           <xmp>
-          @media only screen and (min-width: 421px) and (max-width: 1024px){
-          body{
-              background-color: lightyellow}
-              .table-class th{    
-              border: 2px solid lightyellow;}
-              .table-class td{         
-                  border: 2px solid lightyellow;} 
-          }
+@media only screen and (min-width: 421px) and
+(max-width: 1024px){
+body{
+    background-color: lightyellow;}
+    .table-class th{    
+    border: 2px solid lightyellow;}
+    .table-class td{         
+    border: 2px solid lightyellow;} 
+}
 
-          @media only screen and (min-width:1024px){
-          body {
-              background-color:rgba(231, 99, 71, 0.1);
-              .table-class th{    
-              border: 2px solid rgba(231, 99, 71, 0.1);}
-              .table-class td{         
-              border: 2px solid rgba(231, 99, 71, 0.1);}
-          }
+@media only screen and (min-width:1024px){
+    body{
+        background-color:lightgrey;}
+        .table-class th{    
+        border: 2px solid lightgray;}
+        .table-class td{         
+        border: 2px solid lightgrey;} 
+    }
+             
           </xmp>
         </li>
       </ol>
@@ -124,7 +131,7 @@
       <tr>
         <td>Introduction to Digital Services</td>
         <td><a href="https://hhmoodle.haaga-helia.fi/course/view.php?id=41673&section=6">Link to the course moodle</a></td>
-        <td><a href="https://www.w3schools.com/html/default.asp">W3school HTML Tutorial</a></td></td>
+        <td><a href="https://www.w3schools.com/html/default.asp">W3school HTML Tutorial</a></td>
       </tr>        
   </table>
   <nav class="flex-container felx-item">
