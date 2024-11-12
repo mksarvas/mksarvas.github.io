@@ -6,8 +6,8 @@
     <title>A simple HTML Guide </title>
     <link rel="stylesheet" href="gstyle.css">
     <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
-    <meta name="keywords" content="Sarvas, It Teacher, Inspiring">
-    <meta name="description" content="Inspiring teacher, Customer solution specialist, Self-employed consult - Programming, Web solutions, Project Management">
+    <meta name="keywords" content="Digi Intro, HTML, CSS">
+    <meta name="description" content="A guide for building a responsive website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">   
@@ -19,7 +19,7 @@
         <a href="gresop.html" class="button-47 felx-item">Navi</a>
         <a href="elem.html" class="button-47 felx-item">Elements</a>
       </nav>   
-    <h1>Here is a step-by-step guide for building a  responsive website for the Digi Intro course</h1>
+    <h1>Here is a step-by-step guide for building a responsive website for the Digi Intro course</h1>
     <h2>Create pages with the basic elements</h2>
     <ol>    
         
@@ -31,7 +31,7 @@
             Add the<b>head</b> and  write  <b>html, head ,body </b>tags into it.            
             <p><b>TIP</b> In VS Code, by typing <b>html:5</b> and pressing enter, you get the starting tags for your HTML document-
             </p></li> 
-        <xmp>
+        <section><xmp>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +42,7 @@
 </body>
 </html>
 </xmp>
+</section>
 
                         
         <li> <p>Add a <b>title tag</b> to your page. Notice you have the tag already if you did as told in the previous TIP </p>
@@ -49,12 +50,12 @@
         
         <li> Write <b>meta keywords</b> and <b>meta description </b> to your page, so that they match the content of your site.
         </li>
+        <section>    
             <xmp>
-<meta name="keywords" content="Sarvas, It Teacher, Inspiring">
-
-<meta name="description" content="Inspiring teacher, Customer solution specialist, Self-employed consult - Programming, Web solutions, Project Management">  
+<meta name="keywords" content="Digi Intro, HTML, CSS">
+<meta name="description" content="A guide for building a responsive website">
             </xmp>
-        
+        </section> 
         <li>
             <p>Create the 2 other pages for your site. For example one.html and two.html
             </p>
@@ -66,14 +67,15 @@
         </li>
         
         <li>Link all your 3 pages together by writing the following code into the beginning of each page inside a semantic nav tag</li>
-            
-        <xmp>
+        <section>    
+            <xmp>
 <nav>
     <a href="index.html">INDEX</a> 
     <a href="gresop.html">ONE</a> 
     <a href="elem.html">Elements</a>
 </nav>
-        </xmp>
+            </xmp>
+        </section> 
         <li>Write the correct filenames for your files where needed. We will work on making the navigation look nicer and responsive later.</li>
     </ol>
     <h2>CSS</h2>
@@ -81,15 +83,16 @@
         <li><p>Create a <b>style.css </b>file</p></li>
         
         <li>Link it to all your 3 pages by adding the following line to the head of the file.</li>
-            <xmp>  
+        <section>
+        <xmp>  
 <link rel="stylesheet" href="styles.css">
-            </xmp>
+        </xmp>
+        </section> 
         <li><p>Add style to your styles.css file. So at least <b>background, headings, text.</b> Below is one example of what it could look like.</li>
         
         <li>Add comments to your CSS file, so you can easily find where each style is defined.</li>
-    </ol>
-    <div class="xmp">
-        <xmp>
+    <section>
+    <xmp>
 /* Basic style - to all elements on the page */
 
 body {  
@@ -109,7 +112,8 @@ h2 {
     color: blue;
     }
 </xmp>
-</div>
+</section> 
+    </ol>
 
 <h2>Google Fonts</h2>
 <ol>    
@@ -125,8 +129,7 @@ h2 {
         <p>Add a link to the font into your <code> head</code> tag and the font-family to body in the style file.
         </p>
     </li>
-</ol>
-            <div class="xmp">
+    <section> 
         <xmp>
 The link to the <head>
 
@@ -140,13 +143,9 @@ body {
     /* GOOGLE FONTS */
     font-family: 'Abyssinica SIL';font-size: 16px; 
     }
-        </xmp>
-
-
+    </xmp>
+    </section> 
     </li>
-
-
-
 
 <footer class="flex-container-footer">   
     <table class="table-class flex-item">

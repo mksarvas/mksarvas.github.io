@@ -26,6 +26,7 @@
         Now we will add a table to the footer. 
         Add a empty table into the footer-tag
     </li>
+    <section>
     <xmp>
     <table>
         <tr>
@@ -40,11 +41,12 @@
         </tr>        
     </table> 
     </xmp>
-    
+</section>
     <li>
         Table rows consist <b>tr</b> and a <b>td</b> of table header or table data.
         Add text/image/links to the table header <b>th</b> and table data <b>td </b>elements.
     </li>
+    <section>
     <xmp>
 <tr>
     <th>The course</th>        
@@ -52,12 +54,14 @@
 <tr>
     <td>Introduction to Digital Services</td>
 </tr>
-    </xmp>    
+    </xmp>
+</section>    
     <li>
         <p>Style your table with borders and align text to the left of the table cell. Here the table is in the footer that has a blue background, so the text color is styled to be white.
         </p>
         As we might have tables in other pages on the site, we define class table-class-footer for the table in the footer.
     </li>
+    <section>
     <xmp> 
     .table-class td {
         color:#FFFFFF;
@@ -73,65 +77,80 @@
         border: 2px solid lightblue;
     } 
     </xmp>                
-    
+</section>
     <li><p>Links are blue as default, so we want to change the link color in the class table-style-footer.</p>
     </li>
+<section>
         <xmp>
     .table-class a {
        color: #FFFFFF;
        }
     </xmp>
+</section>
     
     <li>
         To make the footer responsive with the table and the Navi we need to make it a flex container.
         We do this by adding .flex-container-footer class to it.
     </li>
+<section>
     <xmp>
 <footer class="flex-container-footer"> 
     </xmp>
+</section>
     <li>In this flex container we want the items felx direction to be horizontal, so that they are always in a colunm.
         It also defines the backgoound color of the footer. 
     </li>
     <li><p>Add a new class to your style file.</p>
     </li> 
+<section>
         <xmp>
+        
     .flex-container-footer {
         display: flex;
         flex-direction: column;
         background-color: rgb(13, 92, 172);
         }
         </xmp>
+    </section>
     
         Now we still need to define the table and Navi as flex items of the outer container by adding flex-item class to them.
     </li>
+<section>
     <xmp>
 <table class="table-class flex-item">
 <nav class="flex-container felx-item"> 
         </xmp>
+    </section>
 </ol>
 <h2>Some images to the site</h2>
 <ol>
     <li>Add a picture to your page with img tag and define the style in CSS. To fit the image to the page and make it responsive some in-line styling may be needed.
     </li>
+<section>
     <xmp>
+
 <img src="ai-generated-8277268_1920.jpg" alt="Summer and flowers" width=80%> 
-    </xmp>   
+    </xmp>
+</section>   
 
     <img src="ai-generated-8277268_1920.jpg" alt="Summer and flowers" width=80%>   
 
     <li><p>If you want to add a caption to your image, the figure tag might be more useful </li>
         <p>
+    <section>
     <xmp>
 <figure>
     <img src="ai-generated-8188708_640.jpg" alt="A digital hart" width="100%">
     <figcaption>A digital hart</figcaption>
 </figure>        
     </xmp>
+</section>
      <figure>
         <img src="ai-generated-8188708_640.jpg" alt="A digital hart" width="100%">
         <figcaption>A digital hart</figcaption>
      </figure></div>
      <li><p>You can add some style to the figure</p></li>
+    <section>
      <xmp>
 figure {
     border: 1px #cccccc solid;
@@ -147,6 +166,7 @@ figcaption {
     text-align: center;
     }    
        </xmp>
+    </section>
 </ol>
 <footer class="flex-container-footer">   
     <table class="table-class flex-item">
