@@ -40,6 +40,10 @@ table, th, td, tr {
     padding: 8px;
     border: 2px solid #1A202C;
   } 
+
+  .table-class a {
+    color: #FFFFFF;
+  }
  
  /* BUTTON STYLE */
 
@@ -77,7 +81,7 @@ table, th, td, tr {
   }
   .felx-item {
     flex: 1;
-    margin-right: 5px;
+    margin: 5px;
   }
 
   .flex-container-footer {
