@@ -70,6 +70,7 @@ table {
     -webkit-user-select: none;
     touch-action: manipulation;
   }
+
 /* FLEX CONTARINER */
 
 .flex-container {
@@ -109,7 +110,23 @@ body{
         .table-class td{         
         border: 2px solid lightgrey;} 
     }
-/* CSS to make the code parts responsible */
+/* FIGURE STYLE */
+
+figure {
+    border: 1px #cccccc solid;
+    padding: 4px;
+    margin: auto;    
+  }
+  
+  figcaption {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
+  
+ /* CSS to make the code parts responsible */
     xmp {
         white-space: pre-wrap;       /* CSS3 */
         white-space: -moz-pre-wrap;  /* Firefox */
@@ -121,7 +138,6 @@ body{
         padding: 20px;               /* Some padding */
         border: 1px solid #ccc;      /* Gray border */
         border-radius: 5px;          /* Rounded corners */
-      }
-      .xmp{
-        margin-left: 40px;
-      }
+      
+    }
+    
