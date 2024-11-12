@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gstyle.css">
     <meta lang="fi">
     <meta charset="UTF-8">
     <meta name="keywords" content="Sarvas, It Teacher, Inspiring">
@@ -15,28 +15,29 @@
 </head>
 
 <body>
-    <nav "><a  style="color:black" href="index.html">INDEX</a> <a  style="color:black" href="one.html">Responsive page</a> <a  style="color:black" href="two.html">TWO</a></nav>
-    
+    <nav class="flex-container"> 
+        <a href="guide.html" class="button-47 felx-item">Home</a>
+        <a href="gresop.html" class="button-47 felx-item">Navi</a>
+        <a href="two.html" class="button-47 felx-item">Two</a>
+      </nav>   
     <h1>Here is step-by-step guide bulding a web site on the course Digi Intro</h1>
-    <h2>Create pages with the basic elements</h2>
     <ol>
+        <h2>Create pages with the basic elements</h2>
         <li>
             Createa  HTML file named <b>index.html</li></b>
         </li>
         <li>
             Add <b>head</b> and  write  <b>&lt;html>,&lt;head>,&lt;body></xmp></b>tags into it.            <p><b>TIP</b>: In Vs Code with writing <b>html:5</b> and pressing enter, you get the beginning tags for your HTML document.</li>
             <xmp>
-<!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- </head>
- <body>
-    
- </body>
- </html>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>              
+                </body>
+                </html>
             </xmp>             
     
     <li> Add a <b>&lt;title&gt;</b> to your page. Notice you have the tag already if you did as told in the previous TIP</li>
@@ -75,12 +76,10 @@
  }
 
  .main body {   
-  font-family: "Kode Mono", monospace;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;   
   margin-left: 25px;
-  background-color: aqua;
+  background-color:
  }
 
 /*Heading styles */
