@@ -81,8 +81,29 @@ table {
     margin: 5px;
   }
 
-  .flex-container-footer {
+  .flex-container-footer {    
     display: flex;
     flex-direction: column;
-    background-color: rgb(13, 92, 172);
+    background-color: rgb(76, 124, 171);
   }
+
+/* Media rules for responsive desgin */
+
+@media only screen and (min-width: 421px) and
+(max-width: 1024px){
+body{
+    background-color: lightyellow}
+    .table-class th{    
+    border: 2px solid lightyellow;}
+    .table-class td{         
+        border: 2px solid lightyellow;} 
+}
+
+@media only screen and (min-width:1024px){
+body {
+    background-color:lightpink;
+    .table-class th{    
+    border: 2px solid lightpink;}
+    .table-class td{         
+    border: 2px solid lightpink;}
+}
