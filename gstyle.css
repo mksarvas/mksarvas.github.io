@@ -2,7 +2,9 @@
 
 body {  
     background-color:lightcyan;      
-    font-style: normal;      
+    
+    /* GOOGLE FONTS */
+    font-family: 'Abyssinica SIL';font-size: 16px; 
    }
    
   h1 {
@@ -13,7 +15,6 @@ body {
 
 h2 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration:underline;
     color: rgb(13, 92, 172);
 }
 
@@ -107,3 +108,6 @@ body {
     .table-class td{         
     border: 2px solid rgba(231, 99, 71, 0.1);}
 }
+
+/* GOOGLE FONTS */
+<link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
