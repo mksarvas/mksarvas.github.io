@@ -14,31 +14,28 @@ body {
 h2 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration:underline;
-    color: blue;
+    color: rgb(13, 92, 172);
 }
 
-table {
+table { 
     padding: 20px;;
 }
 
-/* Table styöe Class */
+/* Table style Class */
 
-table, th, td, tr {
-    border: 1px solid black;
-  }
-
+ 
 .table-class td {
     color:#FFFFFF;
     text-align:left;
     padding: 8px;
-    border: 2px solid #1A202C;
+    border: 2px solid lightblue;
   } 
 
   .table-class th{
     color:#FFFFFF;
     text-align:left;
     padding: 8px;
-    border: 2px solid #1A202C;
+    border: 2px solid lightblue;
   } 
 
   .table-class a {
@@ -87,6 +84,5 @@ table, th, td, tr {
   .flex-container-footer {
     display: flex;
     flex-direction: column;
-    background-color: DodgerBlue;
-    
+    background-color: rgb(13, 92, 172);
   }
