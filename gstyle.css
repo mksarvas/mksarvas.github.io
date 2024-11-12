@@ -74,7 +74,7 @@ table {
 
 .flex-container {
     display: flex;
-    flex-wrap: row;
+    flex-wrap: wrap;
     text-align: center;
     margin-bottom: 30px;
   }
