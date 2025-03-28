@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="vastaus">
+    </div>
+    <script>
+        //funktio joka kirjoittaa haetun datan halutussa muodossa HTML-sivulle
+        function kerro(data) {
+            var teksti = "";  //Muuttuja, johon tulostettava tieto kerätään
+            teksti = "<h1>Tampereella tapahtuu</h1>"; //Otsikkona toimii tässä tiedostossa "Tampereella tapahtuu"
+
+            // for loop joka käy läpi tietueen ja lisää haluttavat tiedot "teksti" muuttujaan
+            for (var i = 0; i < data.length; i++) {
+                teksti = teksti + "<h3>" + data[i].title + "</h3>";
+                teksti = teksti + "<p>" + data[i].description + "</p>";
+                teksti = teksti + "<p> <a href=" + data[i].url + ">" + data[i].url + "</a></p>";
+            }
+
+            //sisällön asettaminen  "vastaus" diviin
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+
+        //JSON tietueen URL
+        fetch('https://api.visittampere.com/api/v1/visittampere/event/published/all/?format=json&lang=fi')
+
+            //Muunnetaan vastaus JSON muotoon
+            .then(function (response) {
+                return response.json();
+            })
+
+            //Käsitellään muunnettu (eli JSON muotoinen) vastaus
+            .then(function (responseJson) {
+                //Kutsutaan funktiota ja välitetään sille json-vastaus
+                kerro(responseJson);
+            })
+
+            //Jos tuli jokin virhe
+            .catch(function (error) {
+                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>"
+            })
+    </script>
+</body>
+
+</html>

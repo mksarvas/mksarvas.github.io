@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="vastaus"></p>
+    <div id="db">Tää</div>
+    <script>fetch('https://reppun.github.io/kurssit.json')
+
+        // Muunnetaan vastaus JSON muotoon  
+        .then(function (response) {
+            return response.json();
+        })
+        //Käsitellään muunnettu (eli JSON muotoinen) vastaus
+        // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+        .then(function (responseJson) {
+            kerro(responseJson);
+        })
+        // Jos tuli jokin virhe
+        .catch(function (error) {
+            document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan, mutta miksi? Hmm...</p>";
+        })
+    
+    function kerro(data) {
+        var teksti = "";
+    
+        teksti = "<h2>" + data.otsikko + "</h2>";
+    
+        teksti = teksti + "<p>" + "<b>" + "Sivun tarkoitus" + "</b>" + "<br>"
+            + data.kuvaus + "<br>";
+    
+        teksti = teksti + "<p><img src=" + data.kuva + "></p>";
+    
+        teksti = teksti + "<p>" + "<b>" + "Opintojakso" + "</b>" + "<br>"
+            + "Nimi: " + data.opintojakso.nimi + "<br>"
+            + "Tunnus: " + data.opintojakso.tunnus + "<br>"
+            + "Opintopisteet: " + data.opintojakso.opintopisteet + "<p>"
+        
+    
+        teksti = teksti + "<p>Aiheet:</p>";
+        
+                   
+        // En saanut tätä for looppia toimimaan.
+        for (var i = 0; i < data.sisalto.length; i++) {                
+          teksti = teksti  + "<li>" + data.sisalto[i] +"<br>";
+        }
+         
+
+        teksti = teksti + "<p>Tekniikat</p>";
+    
+       // teksti = teksti + data.tekniikat + "</p>";
+    
+        // *En saanut tätä for looppia toimimaan.
+        for (var i = 0; i < data.tekniikat.length; i++) {
+            teksti = teksti + "<p>Aihe: " + data.tekniikat[i].aihe + "</p>";
+            teksti = teksti + "<p>Linkki: " + data.tekniikat[i].linkki + "</p>";
+        }
+        
+    
+    
+        document.getElementById("vastaus").innerHTML = teksti;
+    
+    }</script>
+</body>
+</html>
