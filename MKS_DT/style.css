@@ -30,5 +30,23 @@
     background-color: #FFFFFF;
     opacity: 0.8;
     }
-  
+
+
+/* Sattenkaari ruudukon tyyli */
+
+.rainbow-col-1 { background-color: #FF0000; } /* Red */
+.rainbow-col-2 { background-color: #FF7F00; } /* Orange */
+.rainbow-col-3 { background-color: #FFFF00; } /* Yellow */
+.rainbow-col-4 { background-color: #00FF00; } /* Green */
+.rainbow-col-5 { background-color: #0000FF; } /* Blue */
+.rainbow-col-6 { background-color: #4B0082; } /* Indigo */
+.rainbow-col-7 { background-color: #8B00FF; } /* Violet */
+
+/* Vielä täyettä, tekstin väri ja tekstit keskelle */
+.rainbow-col-1, .rainbow-col-2, .rainbow-col-3, .rainbow-col-4, .rainbow-col-5, .rainbow-col-6, .rainbow-col-7 {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
   

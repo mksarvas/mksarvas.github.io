@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <! –– Bootstrap CSS ja JS linkitys––>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <title>Maikun esimerkkisivut - Digiteknikka</title>
+</head>
+<body>
+    <main>
+        
+      <nav class="navbar navbar-expand-sm navbar-custom">
+        <div class="container-fluid">
+
+            <!-- Logo kuva -->
+            <div class="navi-brad navbar-text">
+                <a href="index.html">
+                    <img src="butterfly-7421658_640.png" alt="Logo" width="50">
+                    <span class="navbar-text"> MKS </span>
+                </a>
+            </div>
+         <!-- Hampparivalikko -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!-- Linkit -->                 
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Etusivu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="karuselli.html">Karuselli</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Toka</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kolmas</a>
+                </li>
+            <!-- Alasveto valikko-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Alasvetovalikko</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Linkki</a></li>
+                      <li><a class="dropdown-item" href="#">Ja toinen</a></li>
+                      <li><a class="dropdown-item" href="#">Ja vielä yksi</a></li>
+                    </ul>
+                  </li> 
+                </ul>                
+            </div>    
+        </div>    
+    </nav>
+    <h2>Bootsrap ruudukko</h2> 
+    <p>Ruudukko jossa on 1 rivi ja 12 saraketta, joissa sarakkeet ovat yhtä leveitä . 
+      Perusruudukossa levys on 12 ja sen avulla määritellään eri kokoisia sarkkaeita</p>
+      
+      <!-- 12 sarakkeen ruudukko  -->
+        <div class="container text-center">
+            <div class="row">
+              <div class="col"> alue 1 </div>
+              <div class="col"> alue 2 </div>
+              <div class="col"> alue 3 </div>
+              <div class="col"> alue 4 </div>
+              <div class="col"> alue 5 </div>
+              <div class="col"> alue 6 </div>
+              <div class="col"> alue 7 </div>
+              <div class="col"> alue 8 </div>
+              <div class="col"> alue 9 </div>
+              <div class="col"> alue 10 </div>
+              <div class="col"> alue 11 </div>
+              <div class="col"> alue 12 </div>            
+            </div>
+        </div>
+      
+        <h3>Ruudukko jossa koko määritelty</h3>    
+        <p>Bootstrapin ruudukko sisältää kuusi tasoa ennalta määritettyjä luokkia responsiivisten ruudukoiden asettelujen rakentamiseen. 
+        </p>
+          <span><b><center>sm|md|lg|xl|xxl</center></b></span><br>
+          <p>Mukauta sarakkeiden kokoa erittäin pienissä, pienissä, keskikokoisissa, suurissa tai erittäin suurissa laitteissa haluamallasi tavalla.</p>
+          <p>Matkapuhelimissa tai näytöissä, jotka ovat alle 576 pikseliä leveitä, sarakkeet pinoutuvat automaattisesti päällekkäin:</p>
+        <figure class="text-center">
+          <img src="Nimetön.png" alt="Ruudukko jossa koko määritelty" width="95%">
+          <figcaption>Ruudukon solujen koot määritelty</figcaption>
+        </figure>
+
+        <h3> Esimerkki ruudukko </h3>
+        <p> Tässä ruudukkos jossa 1.rivillä 2 saraketta, joiden suhde 8:2. Ja 2.rivillä 3 saraketta</p>
+ 
+
+<!-- Ruudukko jossa on 2 riviä ja 3 saraketta, joissa sarakkeet ovat yhtä leveitä .-->
+        
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-sm-8">col-sm-8</div>
+              <div class="col-sm-4">col-sm-4</div>
+            </div>
+            <div class="row">
+              <div class="col-sm">col-sm</div>
+              <div class="col-sm">col-sm</div>
+              <div class="col-sm">col-sm</div>
+            </div>
+          </div>
+    <h3> Sateenkaari ruudukko</h3>
+    <p
+    <div class="container">
+      <div class="row">
+          <div class="col rainbow-col-1">Column 1</div>
+          <div class="col rainbow-col-2">Column 2</div>
+          <div class="col rainbow-col-3">Column 3</div>
+          <div class="col rainbow-col-4">Column 4</div>
+          <div class="col rainbow-col-5">Column 5</div>
+          <div class="col rainbow-col-6">Column 6</div>
+          <div class="col rainbow-col-7">Column 7</div>
+      </div>
+  </div>
+  <p> Tässä esimerkki sateenkaari ruudukosta, jossa on 7 saraketta. </p>
+    <xmp>
+      /* Sattenkaari ruudukon tyyli */
+
+.rainbow-col-1 { background-color: #FF0000; } /* Red */
+.rainbow-col-2 { background-color: #FF7F00; } /* Orange */
+.rainbow-col-3 { background-color: #FFFF00; } /* Yellow */
+.rainbow-col-4 { background-color: #00FF00; } /* Green */
+.rainbow-col-5 { background-color: #0000FF; } /* Blue */
+.rainbow-col-6 { background-color: #4B0082; } /* Indigo */
+.rainbow-col-7 { background-color: #8B00FF; } /* Violet */
+
+/* Vielä täyettä, tekstin väri ja tekstit keskelle */
+.rainbow-col-1, .rainbow-col-2, .rainbow-col-3, .rainbow-col-4, .rainbow-col-5, .rainbow-col-6, .rainbow-col-7 {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+    </xmp>
+</main>
+</body>
+</html>
