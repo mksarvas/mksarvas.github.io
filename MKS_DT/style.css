@@ -8,7 +8,7 @@
     
  }
  nav {
-  margin: 1%;
+  margin-bottom: 1%;
  }
  /* Google fontit */
  
@@ -68,4 +68,18 @@
     text-align: center;
 }
 
-  
+/* Taulukkojen tyyli */ 
+ 
+ 
+/* Optional: Add some padding and text color for better visibility */
+.pastel-rainbow-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2em;
+    text-align: left;
+    color: #333;
+    border: 2px solid #000;
+    
+}  
+.pastel-rainbow-table tbody tr:nth-child(1) { background-color: #FFB3BA; }
