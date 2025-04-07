@@ -5,7 +5,18 @@
     font-family: Arial, sans-serif; /* Fontti koko sivustolle */
     margin: 0; /* Poistaa oletus marginaalit */
     padding: 5%;
+    
  }
+ nav {
+  margin: 1%;
+ }
+ /* Google fontit */
+ 
+ .meie-script-regular {
+  font-family: "Meie Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
  /* BOOTSRAP NAVI VÄRIT */
 
