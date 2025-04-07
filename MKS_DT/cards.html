@@ -14,49 +14,99 @@
 </head>
 <body>
     <main>
-            <!-- Navi omilla väreillä responsiivinen navigaatio-->
-            <nav class="navbar navbar-expand-sm navbar-custom">
-                <div class="container-fluid">
-    
-                    <!-- Logo kuva -->
-                    <div class="navi-brad navbar-text">
-                        <a href="index.html">
-                            <img src="butterfly-7421658_640.png" alt="Logo" width="50">
-                            <span class="navbar-text"> MKS </span>
-                        </a>
-                    </div>
-                 <!-- Hampparivalikko -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <!-- Linkit -->                 
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link" href="index.html">Etusivu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="karuselli.html">Karuselli</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="grid.html">Ruudukko</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cards.html">Kortit</a>
-                        </li>
-                    <!-- Alasveto valikko-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Alasvetovalikko</a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Linkki</a></li>
-                              <li><a class="dropdown-item" href="#">Ja toinen</a></li>
-                              <li><a class="dropdown-item" href="#">Ja vielä yksi</a></li>
-                            </ul>
-                          </li> 
-                        </ul>                
-                    </div>    
+           <!-- Navi omilla väreillä responsiivinen navigaatio-->
+        <nav class="navbar navbar-expand-sm navbar-custom">
+            <div class="container-fluid">
+
+                <!-- Logo kuva -->
+                <div class="navi-brad navbar-text">
+                    <a href="index.html">
+                        <img src="butterfly-7421658_640.png" alt="Logo" width="50">
+                        <span class="navbar-text"> MKS </span>
+                    </a>
+                </div>
+             <!-- Hampparivalikko -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <!-- Linkit -->                 
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">Etusivu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="karuselli.html">Karuselli</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grid.html">Ruudukko</a>
+                    </li>
+                 
+                <!-- Alasveto valikko-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Alasvetovalikko</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="cards.html">Kortit</a></li>
+                          <li><a class="dropdown-item" href="#">Ja toinen</a></li>
+                          <li><a class="dropdown-item" href="#">Ja vielä yksi</a></li>
+                        </ul>
+                      </li> 
+                    </ul>                
                 </div>    
-            </nav> 
+            </div>    
+        </nav> 
+
+        <!-- Sekameteli kortit, jossa kaikkea kivaa.-->
+        <div class="card" style="width: 18rem;">
+            <img src="flowers-2704500_1280.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tässä esimerkki-kortti</h5>
+              <p class="card-text">Tässä kortissa kaikenlaista kivaa. 
+                <ul>
+                    <li>Kuva heti aluksi</li>
+                    <li>Lista eli luettelo korttje</li>
+                    <li>Kolmas</li>
+                    <li>Neljäs</li>
+                    <li>Viides</li>
+                </ul>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Tässä 1.kortti</li>
+              <li class="list-group-item">Ja tässä 2.kortti</li>
+              <li class="list-group-item">Ja viimeinen eli 3.kortti</li>
+              <li class="list-group-item"><button type="button" class="btn btn-primary">Nappi</button></li>
+                </div>
+        </div>
+
+        <!-- 3 korttia rinnan tai alekkain -->
+        <div class="card-group">
+            <div class="card text-bg-primary">
+              <img src="tulip-4739907_1280.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card text-bg-secondary">
+              <img src="roses-3901824_1280.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card text-bg-dark">
+              <img src="butterfly-7421658_640.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+         
             </main>
 </body>
 </html>
