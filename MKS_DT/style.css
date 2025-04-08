@@ -48,12 +48,16 @@
 
 //* Karusellin teksti */
 
- .carousel-caption {    
+.carousel-caption {    
     background-color: #FFFFFF;
     opacity: 0.8;
     }
 
-
+/* Ruudukon caption */
+.cap {
+  font-weight: bold;
+  text-align:center;
+}
 
 /* Sattenkaari ruudukon tyyli */
 
