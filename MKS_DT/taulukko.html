@@ -15,16 +15,17 @@
     <title>Maikun esimerkkisivut - Digiteknikka</title>
 </head>
 <body>
-    <main> <!-- Navi omilla väreillä responsiivinen navigaatio-->
-        <nav class="navbar navbar-expand-sm navbar-custom">
-            <div class="container-fluid">
+    <main> 
+  <!-- Navi omilla väreillä responsiivinen navigaatio-->
+  <nav class="navbar navbar-expand-sm navbar-custom  navbar-dark">
+    <div class="container-fluid">
+
         <!-- Logo kuva -->
-                <div class="navi-brad navbar-text">
-                <a href="index.html">
-                    <p class="navbar-text meie-script-regular"> Maikun Bootstrap sivut.<br>
-                    <img src="butterfly-7421658_640.png" alt="Logo" width="50"></p>
-                    
-                </a>
+        <div class="navi-brad navbar-text">
+            <a href="index.html">
+                <img src="butterfly-7421658_640.png" alt="Logo" width="50">
+                <span class="navbar-text"> MKS </span>
+            </a>
         </div>
      <!-- Hampparivalikko -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -43,23 +44,23 @@
                 <a class="nav-link" href="grid.html">Ruudukko</a>
             </li>
          
-        <!-- Alasveto valikko-->
+        <!-- Alasvetovalikko-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Alasvetovalikko</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="cards.html">Kortit</a></li>
                   <li><a class="dropdown-item" href="Haitari.html">Haitari</a></li>
-                  <li><a class="dropdown-item" href="taulukko.html">Ja vielä yksi</a></li>
+                  <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
                 </ul>
               </li> 
             </ul>                
         </div>    
     </div>    
-</nav>
+</nav> 
 <!-- Responsiivinen taulukko-->
-<table class="table pastel-rainbow-table">
+<table class="table">
     <thead>
-      <tr>
+      <tr class="table-primary">
         <th scope="col">#</th>
         <th scope="col">First</th>
         <th scope="col">Last</th>
@@ -67,19 +68,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr class="table-secondary">
         <th scope="row">1</th>
         <td>Mark</td>
         <td>Otto</td>
         <td>@mdo</td>
       </tr>
-      <tr>
+      <tr class="table-success">
         <th scope="row">2</th>
         <td>Jacob</td>
         <td>Thornton</td>
         <td>@fat</td>
       </tr>
-      <tr>
+      <tr class="table-warning">
         <th scope="row">3</th>
         <td>John</td>
         <td>Doe</td>
@@ -87,6 +88,13 @@
       </tr>
     </tbody>
   </table>
+
+  <h3>Väriä tauluun</h3>
+  <p> Kato Bootstrap:in sivuilta kuinka saat väriä tauluusi. Sinun pitää antaa kullekin riville oma luokka, sen mukaan minkä värin haluat</p>
+  <p>Esimerkiksi yllä olevan taulukon ensimmäinen rivi on määritelty</p>
+  <xmp> <tr class="table-primary"></tr></xmp>
+  <p> Katso ja lue lisää täältä <a href="https://getbootstrap.com/docs/5.3/content/tables/">https://getbootstrap.com/docs/5.3/content/tables/</a></p>
+
     </main>
     </body>
 </html>
