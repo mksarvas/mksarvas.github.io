@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokehaku</title>
+    <link rel="stylesheet" href="style.css">
+
+    <! -- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+<body>
+    <!-- Navi omilla väreillä responsiivinen navigaatio-->
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <div class="container-fluid">
+            <!-- Hampparivalikko -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!-- Linkit -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Etusivu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="poke.html">Poke haku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kolemas.html">3</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Pokemon haku</h1>
+        <p>
+            <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+            <button onclick="poke()">Hae</button><br>
+
+        <div id="nimi">Kirjoita laatikkoon Pokemonin nimi</div>
+        <p id="kuva2"></p>
+        </p>
+        <p>
+        <h5>Pokemonien nimiä</h5>
+        <div>Jos et muista Pokemoneja ulkoa, tässä joitakin
+        <br><br>
+        </div>
+        <ul>
+            <li>Mew</li>
+            <li>Eevee</li>
+            <li>Bulbasaur</li>
+            <li>Ivysaur</li>
+            <li>Venusaur</li>
+            <li>Bulbasaur</li>
+            <li>Charmander</li>
+            <li>Squirtle</li>
+            <li>Pikachu</li>
+            <li>Jigglypuff</li>
+            <li>Meowth</li>
+            <li>Psyduck</li>
+            <li>Machop</li>
+            <li>Geodude</li>
+            <li>Gengar</li>
+        </ul>
+        Tämän listan muodostamiseen on hyödynetty Microsoft Copilotia, joka on GPT-4-arkkitehtuuriin perustuva tekoälyavustaja.<br>
+        Olen käyttänyt promtia "Give me a list of pokemon names in HTML format" 
+        </p>
+
+
+        <script>
+            function poke() {
+                const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+                let name = document.getElementById("pokemonName").value;
+
+
+
+                fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+
+                    // Muunnetaan vastaus JSON-muotoon  
+                    .then(function (response) {
+                        return response.json();
+                    })
+
+                    //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
+                    // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+
+                    .then(function (responseJson) {
+                        pokekuva(responseJson);
+                    })
+
+                    // Jos tuli jokin virhe 
+
+                    .catch(function (error) {
+                        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                    })
+
+                function pokekuva(obj) {
+                    let pokeurl = obj.sprites.front_default;
+                    document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
+                    document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
+                    document.getElementById("pokemonName").value = "";
+                }
+            }
+
+        </script>
+
+    </main>
+</body>
+
+</html>
