@@ -13,6 +13,11 @@
 
 
 </head>
+<style>
+    img{
+        width: 100%;
+    }
+</style>
 
 <body>
     <!-- Navi omilla väreillä responsiivinen navigaatio-->
@@ -44,7 +49,7 @@
 
         
         <div id="vastaus"></div>
-
+        
         <script>
             fetch('tietue.JSON')
 
@@ -73,9 +78,9 @@
                     + obj.kuvaus + "<br><hr>"
                 //kuvan määäritteleminen
                     + "<p><img src=" + obj.kuva + "></p>"
-                    + "<h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
+                    + "<center><h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
                     + "Tunnus: " + obj.opintojakso.tunnus + "<br>"
-                    + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>";
+                    + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br></center>";
 
 
                 tiedot += "<p><h3> Aiheet </h3>";
