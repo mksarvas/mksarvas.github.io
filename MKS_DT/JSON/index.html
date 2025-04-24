@@ -17,7 +17,7 @@
 <body>
     <!-- Navi omilla väreillä responsiivinen navigaatio-->
     <nav class="navbar navbar-expand-sm navbar-custom">
-        <div class="container-fluid">             
+        <div class="container-fluid">
             <!-- Hampparivalikko -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -35,64 +35,64 @@
                         <a class="nav-link" href="kolemas.html">3</a>
                     </li>
 
-                     
+
                 </ul>
             </div>
         </div>
     </nav>
     <main>
 
-    <h1>JSON eka sivu - oma tietue</h1>
-    <div id="vastaus"></div>
+        <h1>JSON eka sivu - oma tietue</h1>
+        <div id="vastaus"></div>
 
-    <script>
-        fetch('tietue.JSON')
+        <script>
+            fetch('tietue.JSON')
 
-            // Muunnetaan vastaus JSON-muotoon  
-            .then(function (response) {
-                return response.json();
-            })
+                // Muunnetaan vastaus JSON-muotoon  
+                .then(function (response) {
+                    return response.json();
+                })
 
-            //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
-            // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+                //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
+                // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
 
-            .then(function (responseJson) {
-                kerro(responseJson);
-            })
+                .then(function (responseJson) {
+                    kerro(responseJson);
+                })
 
-            // Jos tuli jokin virhe 
+                // Jos tuli jokin virhe 
 
-            .catch(function (error) {
-                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-            })
+                .catch(function (error) {
+                    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                })
 
-        function kerro(obj) {
-            let tiedot = "<h3>Kurssin otsikko :" + obj.otsikko + "</h3><br>"
-                + "Kurssin otsikko :" + obj.kuvaus + "<br>"
-                + "<p><img src=" + obj.kuva + "></p>"
-                + "<p>" + "<h3>" + "Opintojakso" + "</h3>" + "<br>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
-                + "Tunnus: " + obj.opintojakso.tunnus + "<br>"
-                + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>"
-                + "Linkki: "
-                + "<a href=" + obj.tekniikat[0].linkki + ">" + obj.tekniikat[0].linkki + "</a>" + "<br>";
+        //Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
 
-
-
-            tiedot += "<h3> Aiheet </h3>";
+            function kerro(obj) {
+                let tiedot = " <h3>Kurssin otsikko: <b> " + obj.otsikko + "</b></h3><br>"
+                    + "Kurssin kuvaus: " + obj.kuvaus + "<br>"
+                //kuvan määäritteleminen
+                    + "<p><img src=" + obj.kuva + "></p>"
+                    + "<h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
+                    + "Tunnus: " + obj.opintojakso.tunnus + "<br>"
+                    + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>";
 
 
+                tiedot += "<p><h3> Aiheet </h3>";
 
-            for (var i = 0; i < obj.tekniikat.length; i++) {
-                tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
-                tiedot += " <a href=" + obj.tekniikat[0].linkki + ">" + obj.tekniikat[0].linkki + "</a>" + "<br>";
+
+            //for-silmukka, joka luo myös linkit sivulle
+                for (var i = 0; i < obj.tekniikat.length; i++) {
+                    tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
+                    tiedot += " <a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+                }
+                tiedot += "</p>";
+
+                document.getElementById("vastaus").innerHTML = tiedot;
+
             }
 
-            document.getElementById("vastaus").innerHTML = tiedot;
-
-        }
-
-    </script>
-    <img src="flowers-599344_1280 copy.jpg " style="width: 30%;">
-</main>
+        </script>
+    </main>
 </body>
 </html>
