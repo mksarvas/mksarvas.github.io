@@ -1,0 +1,93 @@
+ 
+ /* CSS tiedosto, joka sisältää tyylitiedot sivustolle */
+ main {
+    background-color:#F1F5F4; /* Taustaväri koko sivustolle */
+    font-family: Arial, sans-serif; /* Fontti koko sivustolle */
+    margin: 0; /* Poistaa oletus marginaalit */
+    padding: 5%;
+    
+ }
+ nav {
+  margin-bottom: 1%;
+ }
+ /* Google fontit */
+ 
+ .meie-script-regular {
+  font-family: "Meie Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ /* BOOTSRAP NAVI VÄRIT */
+
+ /* taustan väri */
+ .navbar-custom {
+    background-color:greenyellow;
+  }
+  
+  /* Tekstin väri */
+  .navbar-custom .navbar-text{
+    color:green;
+  }
+  
+  /* linkin väri */
+  .navbar-custom .navbar-nav .nav-link {
+    color:green;
+  }
+  
+  /* aktiivisen & hover-linkin väri */  
+  .navbar-custom .nav-item.active .nav-link,
+  .navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+  }
+
+  .navbar-custom a{
+    text-decoration: none;
+
+  }
+
+//* Karusellin teksti */
+
+.carousel-caption {    
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    }
+
+/* Ruudukon caption */
+.cap {
+  font-weight: bold;
+  text-align:center;
+}
+
+/* Sattenkaari ruudukon tyyli */
+
+.rainbow-col-1 { background-color: #FF0000; } /* Red */
+.rainbow-col-2 { background-color: #FF7F00; } /* Orange */
+.rainbow-col-3 { background-color: #FFFF00; } /* Yellow */
+.rainbow-col-4 { background-color: #00FF00; } /* Green */
+.rainbow-col-5 { background-color: #0000FF; } /* Blue */
+.rainbow-col-6 { background-color: #4B0082; } /* Indigo */
+.rainbow-col-7 { background-color: #8B00FF; } /* Violet */
+
+/* Vielä täyettä, tekstin väri ja tekstit keskelle */
+.rainbow-col-1, .rainbow-col-2, .rainbow-col-3, .rainbow-col-4, .rainbow-col-5, .rainbow-col-6, .rainbow-col-7 {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Taulukkojen tyyli */ 
+ 
+ 
+/* Optional: Add some padding and text color for better visibility */
+.pastel-rainbow-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2em;
+    text-align: left;
+    color:#00FF00;
+    border: 2px solid #000;
+    
+}  
+.pastel-rainbow-table tbody tr:nth-child(1) { background-color: #FFB3BA; }
