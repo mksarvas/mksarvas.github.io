@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0178)file:///C:/Users/h02685/AppData/Local/Microsoft/Olk/Attachments/ooa-10791dc0-8069-4835-9af9-0d47d58538d9/f8e71afb1310eb18f833fc4c9fd817eba37bc352bd6f8702f2441b226dec9858/saa.html -->
+<html lang="fi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Sivun metatiedot -->
+    <title>Sää</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- linkki CSS-tiedostoon -->
+    <link href="file:///C:/Users/h02685/AppData/Local/Microsoft/Olk/Attachments/ooa-10791dc0-8069-4835-9af9-0d47d58538d9/f8e71afb1310eb18f833fc4c9fd817eba37bc352bd6f8702f2441b226dec9858/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+    <h1>Sää Helsingissä</h1>
+
+    <div id="time">Sää kello 12:48</div>
+    <div id="vastaus"></div>
+    <div id="vastaus2"><h3>Sää:</h3><h4>vähän pilviä</h4></div>
+    <div id="vastaus3"><h3>Lämpötila:</h3><h4>9.68°C</h4></div>
+    <div id="vastaus4"><h3>Tuuli:</h3><h4>5.81&nbsp;m/s</h4></div>
+    <img id="weather-icon" alt="Sääikoni" width="70px" height="70px" src="./Sää_files/02d.png">
+
+    <script>
+        // Haetaan säädata
+        fetch("https://api.openweathermap.org/data/2.5/weather?id=658225&appid=665ecd56dfc08dbb50feb8b8f5034e28&lang=fi&units=metric")
+
+
+            // Muunnetaan vastaus JSON muotoon
+            // Käsitellään muunnettu (eli JSON muotoinen) vastaus
+            // Kutsutaan funktiota ja välitetään sille json-vastaus 
+            .then(response => response.json())
+            .then(data => saa1(data))
+            
+            .catch(error => {
+                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                console.error("Virhe haettaessa säätietoja:", error);
+            });
+
+        //Funktio saa1() hakee oliosta teitoa ja kirjoittaa sen sivulle
+            function saa1(data) {
+                var teksti = "";         
+
+                teksti2 = "<h3>Sää:</h3>" + "<h4>" + data.weather[0].description + "</h4>";
+                teksti3 = "<h3>Lämpötila:</h3>" + "<h4>" + data.main.temp + "&degC" + "</h4>";
+                teksti4 = "<h3>Tuuli:</h3>" + "<h4>" + data.wind.speed + "&nbspm/s</h4>";
+                       
+
+                // Ikonin URL
+                var iconCode = data.weather[0].icon;
+                var iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png `;
+
+                // Päivitetään kuvan lähde
+                document.getElementById("weather-icon").src = iconUrl;
+
+                // Päivitetään säätiedot sivulle
+                document.getElementById("vastaus").innerHTML = teksti;
+                document.getElementById("vastaus2").innerHTML = teksti2;
+                document.getElementById("vastaus3").innerHTML = teksti3;
+                document.getElementById("vastaus4").innerHTML = teksti4;
+
+                //haetaan kellonaika
+                const d = new Date();
+                hours = d.getHours();
+                minute = d.getMinutes();
+                if (minute < 10){
+                    minute = "0" + minute;
+                }
+                document.getElementById("time").innerHTML= "Sää kello " + hours +":" + minute;
+            } 
+     </script>
+
+</body></html>
