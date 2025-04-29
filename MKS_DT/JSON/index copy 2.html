@@ -13,11 +13,6 @@
 
 
 </head>
-<style>
-    img {
-        width: 100%;
-    }
-</style>
 
 <body>
     <!-- Navi omilla väreillä responsiivinen navigaatio-->
@@ -52,8 +47,7 @@
         </div>
     </nav>
     <main>
-        <div id="vastaus"></div>
-
+        <div class="img_luokka" id="vastaus"></div>
         <script>
             fetch('tietue.JSON')
 
@@ -70,9 +64,8 @@
                 })
 
                 // Jos tuli jokin virhe 
-
                 .catch(function (error) {
-                    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan antamastasi kohteesta</p>";
                 })
 
             //Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
@@ -80,29 +73,22 @@
             function kerro(obj) {
                 let tiedot = "<h1>" + obj.otsikko + "</h1><br>"
                     + obj.kuvaus + "<br><hr>"
-                //kuvan määäritteleminen
-                    + "<p><img src=" + obj.kuva + "></p>"
-
-                //keskitetään teksi center-tagillä keskelle
-                    + "<center><h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
+                    + "<p><img  src=" + obj.kuva + "></p>"
+                    + "<h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
                     + "Tunnus: " + obj.opintojakso.tunnus + "<br>"
-                    + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br></center>";
-
-            //Lisätään väliotsikko
-
-                tiedot += "<p><h3> Aiheet </h3>";
-
-            //for-silmukka, joka luo myös linkit sivulle
-                for (var i = 0; i < obj.tekniikat.length; i++) {
-                    tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
-                    tiedot += " <a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+                    + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>";  
+                    
+                    for(let i=0; i < obj.tekniikka.lenght; i++){
+                        tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
+                        tiedot += "<a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";​                    
+                    }
                 }
-                tiedot += "</p>";
+
+               
 
                 document.getElementById("vastaus").innerHTML = tiedot;
 
             }
-
         </script>
     </main>
 </body>

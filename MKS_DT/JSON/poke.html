@@ -11,40 +11,40 @@
     <! -- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
+</head>
 
 <body>
-   <!-- Navi omilla väreillä responsiivinen navigaatio-->
-   <nav class="navbar navbar-expand-sm navbar-custom">
-    <div class="container-fluid">
-        <!-- Hampparivalikko -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <!-- Linkit -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Etusivu (Tehtävä 1 OSA I)</a>
-                </li>                   
-                <li class="nav-item">
-                    <a class="nav-link" href="kolmas.html">Tehtävä 1 OSA II </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="poke.html">Poke haku (Tehtävä 2 OSA I)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="eevee.html">Tehtävä 2 Osa II</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="saa.html">Tehtävä 3 </a>
-                </li>
+    <!-- Navi omilla väreillä responsiivinen navigaatio-->
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <div class="container-fluid">
+            <!-- Hampparivalikko -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!-- Linkit -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Etusivu (Tehtävä 1 OSA I)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kolmas.html">Tehtävä 1 OSA II </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="poke.html">Poke haku (Tehtävä 2 OSA I)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eevee.html">Tehtävä 2 Osa II</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="saa.html">Tehtävä 3 </a>
+                    </li>
 
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <main>
         <h1>Pokemon haku</h1>
         <p>
@@ -57,7 +57,7 @@
         <p>
         <h5>Pokemonien nimiä</h5>
         <div>Jos et muista Pokemoneja ulkoa, tässä joitakin
-        <br><br>
+            <br><br>
         </div>
         <ul>
             <li>Mew</li>
@@ -76,50 +76,45 @@
             <li>Geodude</li>
             <li>Gengar</li>
         </ul>
-        Tämän listan muodostamiseen on hyödynetty Microsoft Copilotia, joka on GPT-4-arkkitehtuuriin perustuva tekoälyavustaja.<br>
-        Olen käyttänyt promtia "Give me a list of pokemon names in HTML format" 
+        Tämän listan muodostamiseen on hyödynetty Microsoft Copilotia, joka on GPT-4-arkkitehtuuriin perustuva
+        tekoälyavustaja.<br>
+        Olen käyttänyt promtia "Give me a list of pokemon names in HTML format"
         </p>
 
 
         <script>
             function poke() {
-            //Tallennetaan annettu Poken nimi muuttujaan pokeName, muuttetaan se samalla pieniksi kirjaimiksi
+                //Tallennetaan annettu Poken nimi muuttujaan pokeName, muuttetaan se samalla pieniksi kirjaimiksi
                 const pokeName = document.getElementById("pokemonName").value.toLowerCase();
-            //Tallennetaan myös nimi talteen muuttujaan name
+                //Tallennetaan myös nimi talteen muuttujaan name
                 let name = document.getElementById("pokemonName").value;
-
-
-            //Kutsutaan fetchiä halutun Poken tiedoilla, liitetään saau nimi URL:iin
+                //Kutsutaan fetchiä halutun Poken tiedoilla, liitetään saau nimi URL:iin
                 fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
 
                     // Muunnetaan vastaus JSON-muotoon  
                     .then(function (response) {
                         return response.json();
                     })
-
                     //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
                     // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
 
                     .then(function (responseJson) {
                         pokekuva(responseJson);
                     })
-
                     // Jos tuli jokin virhe 
 
                     .catch(function (error) {
                         document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
                     })
-
                 function pokekuva(obj) {
-                //Tallennetaan muuttujan linkki josta löytty Poken kuva    
+                    //Tallennetaan muuttujan linkki josta löytty Poken kuva    
                     let pokeurl = obj.sprites.front_default;
-                //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
+                    //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
                     document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
                     document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
                     document.getElementById("pokemonName").value = "";
                 }
             }
-
         </script>
 
     </main>

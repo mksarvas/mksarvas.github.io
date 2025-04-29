@@ -95,3 +95,8 @@
     
 }  
 .pastel-rainbow-table tbody tr:nth-child(1) { background-color: #FFB3BA; }
+
+//JASON kuva luokka
+.img_luokka {
+  width: 100%;
+}
