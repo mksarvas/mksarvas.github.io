@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Tämän tehtävän tekivät Sara Junnila, Nadja Lyyra, Vertti Nikkanen. Muokkasi Maikku Sarvas 19.5.25 -->
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verbit - Harjoitustehtävät</title>
+
+  <!-- Google Font Nunito for consistency -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--  JS -->
+  <script defer src="projektiryhmae.js"></script>
+</head>
+
+<body>
+
+  <header class="bg-primary text-white py-4">
+    <div class="container">
+      <nav class="navbar navbar-dark" role="navigation">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+          <h1 class="mb-0">
+            <a href="index.html" class="text-white text-decoration-none">Harjoitustehtävät</a>
+          </h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Valikko">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto text-center text-lg-end w-100">
+            <li class="nav-item"><a class="nav-link" href="index.html">🏠 Etusivu</a></li>
+            <li class="nav-item"><span class="nav-category">Englannin tehtävät</span></li>
+            <li class="nav-item"><a class="nav-link" href="adjektiivit.html">Adjektiivit</a></li>
+            <li class="nav-item"><a class="nav-link active" href="verbit.html">Verbit</a></li>
+            <li class="nav-item"><a class="nav-link" href="weather.html">Sää</a></li>
+            <li class="nav-item"><span class="nav-category">Matematiikan tehtävät</span></li>
+            <li class="nav-item"><a class="nav-link" href="kertolaskut.html">Kertolaskut</a></li>
+            <li class="nav-item"><a class="nav-link" href="kertolaskut2.html">Kertolaskut 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="laskut.html">Miinuslaskut</a></li>
+            <li class="nav-item"><a class="nav-link" href="Yhteenlasku.html">Yhteenlaskut</a></li>
+            <li class="nav-item"><span class="nav-category">Bonus-tehtävä</span></li>
+            <li class="nav-item"><a class="nav-link" href="kaupungit.html">Kaupungit</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main class="container my-5">
+    <div class="row">
+      <!-- Image on the right on large screens, top on mobile -->
+      <div class="col-md-6 order-1 order-md-2 d-flex align-items-start justify-content-center mb-4 mb-md-0">
+        <div class="verbiesimerkit text-center">
+          <p class="fw-bold">Valitse laatikon verbeistä, mitkä verbit haluat kirjoittaa enkuksi!</p>
+          <img src="verbit.png" alt="Esimerkkiverbit" class="img-fluid rounded shadow"
+            style="width:100%; max-width:300px;" />
+        </div>
+      </div>
+
+      <div class="col-md-6 order-2 order-md-1">
+        <form class="bg-white p-4 rounded shadow">
+          <h2 class="mb-4">Syötä valitut 10 englanninkielistä verbiä</h2>
+          <div class="row g-3">
+            <div class="col-12"><input type="text" id="verbi1" class="form-control" placeholder="Verbi 1" /></div>
+            <div class="col-12"><input type="text" id="verbi2" class="form-control" placeholder="Verbi 2" /></div>
+            <div class="col-12"><input type="text" id="verbi3" class="form-control" placeholder="Verbi 3" /></div>
+            <div class="col-12"><input type="text" id="verbi4" class="form-control" placeholder="Verbi 4" /></div>
+            <div class="col-12"><input type="text" id="verbi5" class="form-control" placeholder="Verbi 5" /></div>
+            <div class="col-12"><input type="text" id="verbi6" class="form-control" placeholder="Verbi 6" /></div>
+            <div class="col-12"><input type="text" id="verbi7" class="form-control" placeholder="Verbi 7" /></div>
+            <div class="col-12"><input type="text" id="verbi8" class="form-control" placeholder="Verbi 8" /></div>
+            <div class="col-12"><input type="text" id="verbi9" class="form-control" placeholder="Verbi 9" /></div>
+            <div class="col-12"><input type="text" id="verbi10" class="form-control" placeholder="Verbi 10" /></div>
+          </div>
+          <button type="button" class="btn btn-success mt-3" onclick="tarkistaVerbit()">Tarkista verbit</button>
+          <p id="message" class="mt-2 fw-bold text-success"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-muted py-4">
+    <small>&copy; 2025 Harjoitustehtävät</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
