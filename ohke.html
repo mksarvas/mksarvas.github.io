@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Laske arvosanasi</h1>
+    <p>Syötä alla oleviin kenttiin eri tehtävistä ja tentistä saamasi arvosanat</p>
+    <form id="numberForm">
+        <label for="num1">Tentin arvosana:</label>
+        <input type="number" id="num1" name="num1" required><br><br>
+
+        <label for="num2">Harjoitustyön suunnitelman arvosana:</label>
+        <input type="number" id="num2" name="num2" required><br><br>
+
+        <label for="num3">Harjoitustyön toteutuksen arvosana:</label>
+        <input type="number" id="num3" name="num3" required><br><br>
+
+        <label for="num4">Viope pisteet:</label>
+        <input type="number" id="num4" name="num4" required><br><br>
+
+        <button type="button" onclick="saveNumbers()">Lakse</button>
+
+    </form>
+    <p>Viope arvosanasi on </p>
+    <p id="viope"></p>
+    <p>Kurssin arvosanasi on</p>
+    <p id="tulos"></p>
+
+    <script>
+        function saveNumbers() {
+            const C5 = Number(document.getElementById('num1').value);
+            const E5 = Number(document.getElementById('num2').value);
+            const F5 = Number(document.getElementById('num3').value);
+            const J5 = Number(document.getElementById('num4').value);
+            if (C5 === '' || E5 === '' || F5 === '' || J5 === '') {
+                alert('Kaikki kentät ovat pakollisia!');
+                return;
+            }
+
+
+            function arvioiLuku(luku) {
+                if (luku >= 155) {
+                    return 5;
+                } else if (luku >= 135 && luku <= 145) {
+                    return 4;
+                } else if (luku >= 115 && luku <= 134) {
+                    return 3;
+                } else if (luku >= 97 && luku <= 114) {
+                    return 2;
+                } else if (luku >= 78 && luku <= 96) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+
+            document.getElementById('viope').innerHTML = arvioiLuku(J5);
+            function arvosana() {
+                if (arvioiLuku(J5) === 0) {
+                    return '0';
+                }
+                return Math.round((0.33 * ((E5 + F5) / 2) + arvioiLuku(J5) * 0.66) * 0.3 + 0.7 * C5);
+            }
+        
+
+        document.getElementById('tulos').innerHTML = arvosana();
+             
+        }
+
+    </script>
+</body>
+
+</html>
