@@ -27,9 +27,9 @@
         <button type="button" onclick="saveNumbers()">Lakse</button>
 
     </form>
-    <p>Viope arvosanasi on </p>
+    <p>Tarvitset 78 Viope pistettä läpi pääsyyn.</p>
     <p id="viope"></p>
-    <p>Kurssin arvosanasi on</p>
+    
     <p id="tulos"></p>
 
     <script>
@@ -60,7 +60,7 @@
                 }
             }
 
-            document.getElementById('viope').innerHTML = arvioiLuku(J5);
+            document.getElementById('viope').innerHTML = "Viope arvosanansi on " +arvioiLuku(J5);
             function arvosana() {
                 if (arvioiLuku(J5) === 0) {
                     return '0';
@@ -69,7 +69,7 @@
             }
         
 
-        document.getElementById('tulos').innerHTML = arvosana();
+        document.getElementById('tulos').innerHTML = "Kurssi arvosanasi on " + arvosana();
              
         }
 
