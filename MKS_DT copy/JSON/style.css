@@ -10,13 +10,10 @@
  nav {
   margin-bottom: 1%;
  }
- span
+ h3
  {
-  font-weight: 900;
-  font-size: 1.2em;
-  margin: 10px;
+  font-weight: 800;
  }
- 
  /* Google fontit */
  
  .meie-script-regular {
@@ -29,17 +26,17 @@
 
  /* taustan väri */
  .navbar-custom {
-    background-color:blueviolet;
+    background-color:greenyellow;
   }
   
   /* Tekstin väri */
   .navbar-custom .navbar-text{
-    color:#FFFFFF;
+    color:green;
   }
   
   /* linkin väri */
   .navbar-custom .navbar-nav .nav-link {
-    color:#FFFFFF;;
+    color:green;
   }
   
   /* aktiivisen & hover-linkin väri */  
@@ -98,3 +95,8 @@
     
 }  
 .pastel-rainbow-table tbody tr:nth-child(1) { background-color: #FFB3BA; }
+
+//JASON kuva luokka
+.img_luokka {
+  width: 100%;
+}

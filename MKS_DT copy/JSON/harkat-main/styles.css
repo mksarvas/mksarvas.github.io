@@ -1,0 +1,112 @@
+/* General */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fffdf9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Button */
+.btn-category {
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-pink {
+  background-color: #fc5c7d;
+}
+
+.btn-green {
+  background-color: #00c49a;
+}
+
+.btn-blue {
+  background-color: #6a82fb;
+}
+
+.btn-category:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
+
+/* Navigation */
+.custom-nav {
+  background-color: #f2f6ff;
+  border-bottom: 2px solid #dbe2ef;
+  padding: 0.75rem 0;
+}
+
+.custom-nav .nav-link {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-nav .nav-link:hover {
+  background-color: #e1eaff;
+}
+
+.nav-category {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Bootstrap navbar */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  color: white;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffe;
+  text-decoration: underline;
+}
+
+/* Weather heading */
+.weather {
+  font-size: 2rem;
+}
+
+#inputs input {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .d-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}

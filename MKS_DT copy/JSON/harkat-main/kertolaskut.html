@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Tämän tehtävän tekivät Tapio Mäntylä ja Miro Rautanen -->
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kertolaskut - Harjoitustehtävät</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="bg-primary text-white py-4">
+    <div class="container">
+      <nav class="navbar navbar-dark" role="navigation">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+          <h1 class="mb-0">
+            <a href="index.html" class="text-white text-decoration-none">Harjoitustehtävät</a>
+          </h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Valikko">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto text-center text-lg-end w-100">
+            <li class="nav-item"><a class="nav-link" href="index.html">🏠 Etusivu</a></li>
+            <li class="nav-item"><span class="nav-category">Englannin tehtävät</span></li>
+            <li class="nav-item"><a class="nav-link" href="adjektiivit.html">Adjektiivit</a></li>
+            <li class="nav-item"><a class="nav-link active" href="verbit.html">Verbit</a></li>
+            <li class="nav-item"><a class="nav-link" href="weather.html">Sää</a></li>
+            <li class="nav-item"><span class="nav-category">Matematiikan tehtävät</span></li>
+            <li class="nav-item"><a class="nav-link" href="kertolaskut.html">Kertolaskut</a></li>
+            <li class="nav-item"><a class="nav-link" href="kertolaskut2.html">Kertolaskut 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="laskut.html">Miinuslaskut</a></li>
+            <li class="nav-item"><a class="nav-link" href="Yhteenlasku.html">Yhteenlaskut</a></li>
+            <li class="nav-item"><span class="nav-category">Bonus-tehtävä</span></li>
+            <li class="nav-item"><a class="nav-link" href="kaupungit.html">Kaupungit</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main class="container my-5">
+
+    <h2 class="mb-4 text-center">Kertotauluharjoitus</h2>
+
+    <p class="lead text-center mb-4">Hauskaa oppimista – valitse luku, jonka kertotaulua haluat harjoitella.</p>
+
+    <section id="start" class="mb-5">
+      <label for="luku" class="form-label">Minkä luvun kertotaulua haluat harjoitella? (1-10)</label>
+      <div class="input-group">
+        <input type="number" class="form-control" id="luku" placeholder="Syötä luku 1-10" min="1" max="10" />
+        <button class="btn btn-primary" type="button" onclick="aloitaHarjoitus()">Aloita</button>
+      </div>
+    </section>
+
+    <section id="kysymysalue" class="mb-5" style="display:none;">
+      <p id="kysymys" class="fs-4 text-center mb-3"></p>
+      <div class="input-group justify-content-center">
+        <input type="number" class="form-control w-auto" id="vastaus" placeholder="Vastauksesi" />
+        <button class="btn btn-success" type="button" onclick="tarkistaVastaus()">Seuraava</button>
+      </div>
+    </section>
+
+    <section id="tulos" class="alert alert-info text-center fs-5" style="display:none;"></section>
+
+  </main>
+
+  <footer class="text-center text-muted py-4">
+    <small>&copy; 2025 Harjoitustehtävät</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    let luku = 0;
+    let kerroin = 1;
+    let oikeat = 0;
+
+    function aloitaHarjoitus() {
+      luku = document.getElementById("luku").value;
+
+      if (luku === "" || luku < 1 || luku > 10 || parseInt(luku) != parseFloat(luku)) {
+        alert("Syötä positiivinen kokonaisluku väliltä 1-10.");
+        return;
+      }
+
+      luku = parseInt(luku);
+      oikeat = 0;
+      kerroin = 1;
+
+      document.getElementById("start").style.display = "none";
+      document.getElementById("kysymysalue").style.display = "block";
+      document.getElementById("tulos").style.display = "none";
+
+      naytaKysymys();
+    }
+
+    function naytaKysymys() {
+      document.getElementById("kysymys").textContent = `${kerroin} x ${luku} = ?`;
+      document.getElementById("vastaus").value = "";
+      document.getElementById("vastaus").focus();
+    }
+
+    function tarkistaVastaus() {
+      const vastaus = parseInt(document.getElementById("vastaus").value);
+      if (vastaus === kerroin * luku) oikeat++;
+      kerroin++;
+      if (kerroin > 10) {
+        naytaTulos();
+      } else {
+        naytaKysymys();
+      }
+    }
+
+    function naytaTulos() {
+      document.getElementById("kysymysalue").style.display = "none";
+      document.getElementById("tulos").textContent = `Oppiminen on tärkeintä! Sait ${oikeat} / 10 oikein.`;
+      document.getElementById("tulos").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
