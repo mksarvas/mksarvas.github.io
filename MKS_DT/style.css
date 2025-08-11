@@ -3,9 +3,7 @@
  main {
     background-color:#F1F5F4; /* Taustaväri koko sivustolle */
     font-family: Arial, sans-serif; /* Fontti koko sivustolle */
-    margin: 0; /* Poistaa oletus marginaalit */
-    padding: 5%;
-    
+    margin: 10px; /* Marginaali sivuston ympärillä */  
  }
  nav {
   margin-bottom: 1%;
@@ -15,6 +13,9 @@
   font-weight: 900;
   font-size: 1.2em;
   margin: 10px;
+ }
+ body {
+    background-color: #F1F5F4; /* Taustaväri koko sivulle */
  }
  
  /* Google fontit */
@@ -39,8 +40,8 @@
   
   /* linkin väri */
   .navbar-custom .navbar-nav .nav-link {
-    color:#FFFFFF;;
-  }
+    color:#FFFFFF;
+    }
   
   /* aktiivisen & hover-linkin väri */  
   .navbar-custom .nav-item.active .nav-link,
