@@ -47,44 +47,16 @@
     </nav>
     <main>
         <p>
-            <img src="pokehaku.png" alt="Pokehaku kuva" width="100%">
+            <h1>Kuva miltä Pokemon haku näyttää</h1>
+                <img src="pokehaku.png" alt="Pokehaku kuva" width="100%">
         </p>
          
 
 
         <script>
             function poke() {
-                //Tallennetaan annettu Poken nimi muuttujaan pokeName, muuttetaan se samalla pieniksi kirjaimiksi
-                const pokeName = document.getElementById("pokemonName").value.toLowerCase();
-                //Tallennetaan myös nimi talteen muuttujaan name
-                let name = document.getElementById("pokemonName").value;
-                //Kutsutaan fetchiä halutun Poken tiedoilla, liitetään saau nimi URL:iin
-                fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
 
-                    // Muunnetaan vastaus JSON-muotoon  
-                    .then(function (response) {
-                        return response.json();
-                    })
-                    //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
-                    // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
-
-                    .then(function (responseJson) {
-                        pokekuva(responseJson);
-                    })
-                    // Jos tuli jokin virhe 
-
-                    .catch(function (error) {
-                        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-                    })
-                function pokekuva(obj) {
-                    //Tallennetaan muuttujan linkki josta löytty Poken kuva    
-                    let pokeurl = obj.sprites.front_default;
-                    //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
-                    document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
-                    document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
-                    document.getElementById("pokemonName").value = "";
-                }
-            }
+                 }
         </script>
 
     </main>
