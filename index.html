@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,164 +11,187 @@
     <meta name="description" content="A guide for building a responsive website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-    <nav class="flex-container"> 
+    <nav class="flex-container">
         <a href="index.html" class="button-47 felx-item">Home</a>
         <a href="gresop.html" class="button-47 felx-item">Navi</a>
         <a href="elem.html" class="button-47 felx-item">Elements</a>
-      </nav>   
-      
+    </nav>
+
     <h1>Here is a step-by-step guide for building a responsive website for the Digi Intro course</h1>
     <h2>Create pages with the basic elements</h2>
-    <ol>    
-        
+    <ol>
+
         <li>
             <p>Create an HTML file named <b>index.html</b></p>
         </li>
-        
+
         <li>
-            Add the<b>head</b> and  write  <b>html, head, body </b>tags into it.            
-            <p><b>TIP</b> In VS Code, by typing <b>html:5</b> and pressing enter, you get the starting tags for your HTML document-
-            </p></li> 
+            Add the <b>head</b> and write <b>html, head, body </b>tags into it.
+            <p><b>TIP</b> In VS Code, by typing <b>html:5</b> and pressing enter, you get the starting tags for your
+                HTML document-
+            </p>
+        </li>
         <section>
-            
+            <xmp>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>              
-</body>
-</html>
-</xmp>
-</section>
 
-                        
-        <li> <p>Add a <b>title tag</b> to your page. Notice you have the tag already if you did as told in the previous TIP </p>
-        </li>        
-        
-        <li> Write <b>meta keywords</b> and <b>meta description </b> to your page, so that they match the content of your site.
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+            </xmp>
+        </section>
+
+        <li>
+            <p>Add a <b>title tag</b> to your page. Notice you have the tag already if you did as told in the previous
+                TIP </p>
         </li>
-        <section>    
+
+        <li> Write <b>meta keywords</b> and <b>meta description </b> to your page, so that they match the content of
+            your site.
+        </li>
+        <section>
             <xmp>
 <meta name="keywords" content="Digi Intro, HTML, CSS">
 <meta name="description" content="A guide for building a responsive website">
             </xmp>
-        </section> 
+        </section>
         <li>
             <p>Create the 2 other pages for your site. For example one.html and two.html
             </p>
         </li>
-        
+
         <li>
             <p>Copy the head tag and its content from index.html to the new pages.
-            </p>        
+            </p>
         </li>
-        
-        <li>Link all your 3 pages together by writing the following code into the beginning of each page inside a semantic nav tag</li>
-        <section>    
+
+        <li>Link all your 3 pages together by writing the following code into the beginning of each page inside a
+            semantic nav
+            tag</li>
+        <section>
             <xmp>
-<nav>
-    <a href="index.html">INDEX</a> 
-    <a href="gresop.html">ONE</a> 
-    <a href="elem.html">Elements</a>
-</nav>
+                <nav>
+                    <a href="index.html">INDEX</a>
+                    <a href="gresop.html">ONE</a>
+                    <a href="elem.html">Elements</a>
+                </nav>
             </xmp>
-        </section> 
-        <li>Write the correct filenames for your files where needed. We will work on making the navigation look nicer and responsive later.</li>
+        </section>
+        <li>Write the correct filenames for your files where needed. We will work on making the navigation look nicer
+            and
+            responsive later.</li>
     </ol>
     <h2>CSS</h2>
     <ol>
-        <li><p>Create a <b>style.css </b>file</p></li>
-        
+        <li>
+            <p>Create a <b>style.css </b>file</p>
+        </li>
+
         <li>Link it to all your 3 pages by adding the following line to the head of the file.</li>
         <section>
-        <xmp>  
-<link rel="stylesheet" href="styles.css">
-        </xmp>
-        </section> 
-        <li><p>Add style to your styles.css file. So at least <b>background, headings, text.</b> Below is one example of what it could look like.</li>
-        
+            <xmp>
+                <link rel="stylesheet" href="styles.css">
+            </xmp>
+        </section>
+        <li>
+            <p>Add style to your styles.css file. So at least <b>background, headings, text.</b> Below is one example of
+                what it could look like.
+        </li>
+
         <li>Add comments to your CSS file, so you can easily find where each style is defined.</li>
-    <section>
-    <xmp>
-/* Basic style - to all elements on the page */
+        <section>
+            <xmp>
+                /* Basic style - to all elements on the page */
 
-body {  
-    background-color:lightcyan;      
-    font-style: normal;      
-    }
-   
-h1 {
-    font-family: 'Pacifico';
-    text-shadow: 1px 1px white;
-    color: rgb(122, 121, 120);
-    }
+                body {
+                background-color:lightcyan;
+                font-style: normal;
+                }
 
-h2 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration:underline;
-    color: blue;
-    }
-</xmp>
-</section> 
+                h1 {
+                font-family: 'Pacifico';
+                text-shadow: 1px 1px white;
+                color: rgb(122, 121, 120);
+                }
+
+                h2 {
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration:underline;
+                color: blue;
+                }
+            </xmp>
+        </section>
     </ol>
 
-<h2>Google Fonts</h2>
-<ol>    
-    <li><p>Currently there are 1739 fonts available at Google. Here is help on how you can use them.
-        </p>
-        <ul>
-        <b>
-            <li><a href="https://fonts.google.com/"> Here a link to Google fonts.</a>
-            <li><a href="https://www.w3schools.com/howto/howto_google_fonts.asp"> Here a link to W3school and list od Google Fonts</a>
-        </li></b>
-        </ul>
-        
-        <p>Add a link to the font into your <code> head</code> tag and the font-family to body in the style file.
-        </p>
-    </li>
-    <section> 
-        <xmp>
-The link to the <head>
+    <h2>Google Fonts</h2>
+    <ol>
+        <li>
+            <p>Currently there are 1739 fonts available at Google. Here is help on how you can use them.
+            </p>
+            <ul>
+                <b>
+                    <li><a href="https://fonts.google.com/"> Here a link to Google fonts.</a>
+                    <li><a href="https://www.w3schools.com/howto/howto_google_fonts.asp"> Here a link to W3school and
+                            list
+                            od Google Fonts</a>
+                    </li>
+                </b>
+            </ul>
 
-<link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
-            
-Define the font family in CSS file
+            <p>Add a link to the font into your <code> head</code> tag and the font-family to body in the style file.
+            </p>
+        </li>
+        <section>
+            <xmp>
+                The link to the
 
-body {  
-   background-color:lightcyan;      
-                
-    /* GOOGLE FONTS */
-    font-family: 'Abyssinica SIL';font-size: 16px; 
-    }
-    </xmp>
-    </section> 
-    </li>
+                <head>
 
-<footer class="flex-container-footer">   
-    <table class="table-class flex-item">
-        <tr>
-          <th>The course</th>
-          <th>Moodle</th>
-          <th>W3school</th>
-        </tr>
-        <tr>
-          <td>Introduction to Digital Services</td>
-          <td><a href="https://hhmoodle.haaga-helia.fi/course/view.php?id=41673&section=6">Link to the course moodle</a></td>
-          <td><a href="https://www.w3schools.com/html/default.asp">W3school HTML Tutorial</a></td></td>
-        </tr>        
-    </table>
-    <nav class="flex-container felx-item">
-    <a href="index.html" class="button-47 felx-item">Home</a>
-    <a href="gresop.html" class="button-47 felx-item">Navi</a>
-    <a href="elem.html" class="button-47 felx-item">Table, Image</a>
-    </nav>
-</footer> 
-     
+                    <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
+
+                    Define the font family in CSS file
+
+                    body {
+                    background-color:lightcyan;
+
+                    /* GOOGLE FONTS */
+                    font-family: 'Abyssinica SIL';font-size: 16px;
+                    }
+            </xmp>
+        </section>
+        </li>
+
+        <footer class="flex-container-footer">
+            <table class="table-class flex-item">
+                <tr>
+                    <th>The course</th>
+                    <th>Moodle</th>
+                    <th>W3school</th>
+                </tr>
+                <tr>
+                    <td>Introduction to Digital Services</td>
+                    <td><a href="https://hhmoodle.haaga-helia.fi/course/view.php?id=41673&section=6">Link to the course
+                            moodle</a></td>
+                    <td><a href="https://www.w3schools.com/html/default.asp">W3school HTML Tutorial</a></td>
+                    </td>
+                </tr>
+            </table>
+            <nav class="flex-container felx-item">
+                <a href="index.html" class="button-47 felx-item">Home</a>
+                <a href="gresop.html" class="button-47 felx-item">Navi</a>
+                <a href="elem.html" class="button-47 felx-item">Table, Image</a>
+            </nav>
+        </footer>
+
 </body>
+
 </html>
