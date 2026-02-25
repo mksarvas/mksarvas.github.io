@@ -11,7 +11,12 @@
 </head>
 
 <body>
-    <div id="carouselExample" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="butterfly-7421658_640.png" class="d-block w-100" alt="...">
@@ -31,7 +36,53 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+  </div>
+   <!-- Responsiivinen taulukko -->
+            <div class="table-responsive">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nimi</th>
+                            <th>Rooli</th>
+                            <th>Sähköposti</th>
+                            <th>Puhelin</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Tuomas Rossi</td>
+                            <td>Opiskelija</td>
+                            <td>tuomas.rossi(at)myy.haaga-helia.fi</td>
+                            <td>040 123 4567</td>
+                        </tr>
+                        <tr>
+                            <td>Tero Testi</td>
+                            <td>Testinukke</td>
+                            <td>tero.testi(at)testi.fi</td>
+                            <td>040 456 7890</td>
+                        </tr>
+                        <tr>
+                            <td>Milla Malli</td>
+                            <td>Mallinukke</td>
+                            <td>milla.malli(at)testi.fi</td>
+                            <td>0400 567 890</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
 </body>
 
 </html>
