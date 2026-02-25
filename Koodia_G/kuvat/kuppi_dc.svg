@@ -1,0 +1,43 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 175 150" width="75" height="85">
+  
+<defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #8c6239;
+      }
+
+      .cls-1, .cls-2, .cls-5 {
+        stroke: #8c6239;
+      }
+
+      .cls-1, .cls-5 {
+        stroke-width: 7.84px;
+      }
+
+      .cls-2, .cls-3, .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke-width: 13.62px;
+      }
+
+      .cls-4, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-6 {
+        stroke: blue;
+        stroke-width: 2.07px;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-1" cx="73.5" cy="108.5" rx="68.5" ry="24.5"/>
+  <ellipse class="cls-2" cx="131" cy="58" rx="29" ry="26"/>
+  <ellipse class="cls-3" cx="75" cy="109" rx="44" ry="13"/>
+  <path id="Polygon_1" data-name="Polygon 1" class="cls-4" d="M133.28,23.9s11.472,89.286-57.693,91.086-59.03-90.393-59.03-90.393Z"/>
+  <ellipse class="cls-5" cx="74.141" cy="23.891" rx="58.141" ry="18.891"/>
+  <path class="cls-6" d="M50.5,46l4.245,11.58,10.9-7.092L61.614,62.133,75,62.238,64.238,69.5,75,76.761l-13.383.105L65.64,88.512l-10.9-7.091L50.5,93,46.255,81.42,35.36,88.512l4.026-11.645L26,76.761,36.763,69.5,26,62.238l13.383-.1L35.36,50.488,46.255,57.58,50.5,46"/>
+</svg>

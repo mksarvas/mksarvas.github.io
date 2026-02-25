@@ -1,0 +1,130 @@
+/* yhteiset */
+
+body {
+    color: black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+main,
+header,
+footer {
+    text-align: center;
+}
+
+#logokuva {
+    vertical-align: middle;
+}
+
+.kahvi {
+    background-color: beige;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* palstojen taustat läpinäkyviksi, jotta taustakuva näkyy */
+.elementti {
+    background-color:rgb(127, 255, 212,0.3);
+}
+
+
+/*navigointi*/
+#topnav ul {
+    padding-left: 0px;
+}
+
+#topnav li {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+}
+
+#topnav a {
+    color: red;
+    text-decoration: none;
+}
+
+
+h1 {
+    color: red;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.tuotekuva {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+
+/* Tehdään sivusta responsiivinen*/
+
+
+@media only screen and (max-width:430px) {
+    body {
+        background-color: lightcyan;
+    }
+
+    /* Ylävalikon listaelementit allekkain (mobiilinavigaatio) */
+    #topnav li {
+        display: block;
+        /* Jokainen valikkokohta omalle rivilleen */
+        text-align: left;
+        /* Teksti vasemmalle tasattuna */
+    }
+
+
+    /* Header flexboxiksi ja sisältö pystysuunnassa käänteisessä järjestyksessä */
+    header {
+        display: flex;
+        /* Käytetään flexbox-asettelua */
+        flex-direction: column-reverse;
+        /* Käännetään elementtien järjestys (esim. nav ennen logoa) */
+    }
+
+
+    /* Suuremmat linkit ylävalikossa (parempi luettavuus ja kosketuskäyttö) */
+    #topnav a {
+        font-size: 1.3em;
+        /* Linkkiteksti 30 % oletuskokoa suuremmaksi */
+    }
+}
+
+/* keskikokoiset */
+
+@media only screen and (min-width:431px) {
+
+    /* Lisätään taustakuva, joka näkyy vain keskikokoisilla näytöillä (esim. tabletit) */
+    main {
+        background-image: url(kuvat/tausta_kuppi.jpg);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    } 
+    body {
+        background-color:lightpink;
+    }
+
+}
+
+/* isot näytöt */
+
+@media only screen and (min-width:1024px) {
+
+    :root {
+        background-image: url(kuvat/tausta_100.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    body {
+        width: 1024px;
+        border: black 1px solid;
+        margin: auto;
+        background-color: lightgoldenrodyellow;
+        
+    }
+    .taustakuva{ display: none;}
+
+}
+
+/* flexataan - palstat rinnan isommilla näytöillä, mutta sallitaan rivinvaihto, jos tila ei riitä */
+
