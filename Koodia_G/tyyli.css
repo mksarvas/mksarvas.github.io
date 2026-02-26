@@ -148,3 +148,6 @@ h1 {
     flex: 1;
     padding-right: 5px;
 }
+.flex-img{
+    width:75%;
+}
