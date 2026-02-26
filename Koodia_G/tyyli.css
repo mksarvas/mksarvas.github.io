@@ -6,10 +6,13 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-main,
+main {
+    text-align: center;
+}
 header,
 footer {
     text-align: center;
+    background-color: aliceblue;
 }
 
 #logokuva {
@@ -17,15 +20,16 @@ footer {
 }
 
 .kahvi {
-    background-color: beige;
-
+    /* palstojen taustat läpinäkyviksi, jotta taustakuva näkyy. 
+    Viimeinen arvo 0.135 määrittelee läpinäkyvyydy*/
+    background-color: rgba(0, 0, 255, 0.135);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* palstojen taustat läpinäkyviksi, jotta taustakuva näkyy */
+/* palstojen taustat läpinäkyviksi, jotta taustakuva näkyy 
 .elementti {
-    background-color:rgb(127, 255, 212,0.3);
-}
+    background-color: rgb(127, 255, 212, 0.3);
+} */
 
 
 /*navigointi*/
@@ -96,12 +100,15 @@ h1 {
     /* Lisätään taustakuva, joka näkyy vain keskikokoisilla näytöillä (esim. tabletit) */
     main {
         background-image: url(kuvat/tausta_kuppi.jpg);
-        background-repeat: no-repeat;
-        background-position: right bottom;
-    } 
-    body {
-        background-color:lightpink;
+        Background-size: cover;
+        /* Venyttää kuvan täyttämään tilan */
+        background-position: center;        /* Keskittää kuvan */
+        margin: 0;
+        /* Poistaa body-marginaalin */
     }
+
+    body {
+        background-color:lightgrey;   }
 
 }
 
@@ -109,7 +116,7 @@ h1 {
 
 @media only screen and (min-width:1024px) {
 
-    :root {
+    body{ 
         background-image: url(kuvat/tausta_100.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -120,11 +127,24 @@ h1 {
         border: black 1px solid;
         margin: auto;
         background-color: lightgoldenrodyellow;
-        
+
     }
-    .taustakuva{ display: none;}
+
+    .taustakuva {
+        display: none;
+    }
 
 }
 
 /* flexataan - palstat rinnan isommilla näytöillä, mutta sallitaan rivinvaihto, jos tila ei riitä */
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1;
+    padding-right: 5px;
+}
