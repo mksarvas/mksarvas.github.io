@@ -116,6 +116,10 @@ h1 {
 
 @media only screen and (min-width:1024px) {
 
+    main{
+        background-image: none;
+    }
+
     body{ 
         background-image: url(kuvat/tausta_100.jpg);
         background-repeat: no-repeat;
@@ -129,10 +133,15 @@ h1 {
         background-color: lightgoldenrodyellow;
 
     }
+    .kahvi {
+    /* palstojen taustat läpinäkyviksi, jotta taustakuva näkyy. 
+    Viimeinen arvo 0.135 määrittelee läpinäkyvyydy*/
+    background-color: rgba(0, 0, 255, 0.5);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
 
-    .taustakuva {
-        display: none;
-    }
+    5
 
 }
 
@@ -149,5 +158,5 @@ h1 {
     padding-right: 5px;
 }
 .flex-img{
-    width:75%;
+    width: 100%;
 }
