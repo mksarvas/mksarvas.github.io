@@ -1,0 +1,132 @@
+ /* Basic style - to all elements on the page */
+
+ body {
+   background-color: aquamarine;
+   font-style: normal;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ h1 {
+   text-shadow: 1px 1px white;
+   color: black
+ }
+
+ h2 {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   text-decoration: underline;
+   color: blue;
+ }
+
+ p {
+   font-family: 'Georgia', serif;
+   line-height: 1;
+
+ }
+
+/* felxbox */
+
+ .flex-container {
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   margin-bottom: 30px;
+ }
+
+ .flex-item {
+   flex: 1;
+   margin-right: 5px;
+ }
+
+
+ /* media query */
+
+ /* small screens - mobile, less than 420px */
+ @media only screen and (max-width: 420px) {
+   body {
+     background-color: lightgray;
+   }
+ }
+
+ /* medium screens  421px to 1024px */
+ @media only screen and (min-width: 421px) and (max-width: 1024px) {
+   body {
+     background-color: lightyellow;
+   }
+
+   .table-class th {
+     border: 2px solid lightyellow;
+   }
+
+   .table-class td {
+     border: 2px solid lightyellow;
+   }
+ }
+
+ /* big screen - desktop, more than 1024px */
+
+ @media only screen and (min-width:1024px) {
+   body {
+     background-color: lightgrey;
+   }
+
+   .table-class th {
+     border: 2px solid lightgray;
+   }
+
+   .table-class td {
+     border: 2px solid lightgrey;
+   }
+ }
+
+ /* button style for the navi */
+
+ .button-3 {
+   appearance: none;
+   background-color: #2ea44f;
+   border: 1px solid rgba(27, 31, 35, .15);
+   border-radius: 6px;
+   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 20px;
+   padding: 6px 16px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+   white-space: nowrap;
+ }
+
+ .button-3:focus:not(:focus-visible):not(.focus-visible) {
+   box-shadow: none;
+   outline: none;
+ }
+
+ .button-3:hover {
+   background-color: #2c974b;
+ }
+
+ .button-3:focus {
+   box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+   outline: none;
+ }
+
+ .button-3:disabled {
+   background-color: #94d3a2;
+   border-color: rgba(27, 31, 35, .1);
+   color: rgba(255, 255, 255, .8);
+   cursor: default;
+ }
+
+ .button-3:active {
+   background-color: #298e46;
+   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+ }

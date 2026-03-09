@@ -160,3 +160,9 @@ h1 {
 .flex-img{
     width: 100%;
 }
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
