@@ -4,41 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Café - Contact</title>
+    <title>Our Schnauzer Family | Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Eco Café</h1>
-
-        <nav>
-            <a class="btn-124 flex-item" href="index.html">Home</a>
-            <a class="btn-124 flex-item" href="menu.html">Menu</a>
-            <a class="btn-124 flex-item active" href="contact.html">Contact</a>
-        </nav>
-
+    <!-- Shared site header and page navigation. -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html">Our Schnauzer Family</a>
+            <p class="tagline">Small dogs, big personalities</p>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="history.html">History</a>
+                <a href="culture.html">Culture</a>
+                <a class="active" href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>Contact Information</h2>
-            <p><strong>Address:</strong> Green Street 12, Helsinki</p>
-            <p><strong>Phone:</strong> +358 40 123 4567</p>
-            <p><strong>Email:</strong> info@ecocafe.fi</p>
-
-            <h3>Opening Hours</h3>
-            <ul>
-                <li>Monday-Friday: 08:00-18:00</li>
-                <li>Saturday: 10:00-16:00</li>
-                <li>Sunday: Closed</li>
-            </ul>
+        <!-- Introductory contact message; replace placeholders before publishing. -->
+        <section class="page-intro" aria-labelledby="contact-heading">
+            <p class="eyebrow">Get in touch</p>
+            <h1 id="contact-heading">Contact our family</h1>
+            <p>If you would like to ask about our dogs or share your own Schnauzer story, you can reach us using the
+                placeholder details below. Replace them with your preferred contact information before publishing.</p>
         </section>
+        <!-- Contact details and message form share a responsive layout. -->
+        <div class="contact-layout">
+            <!-- Definition list presents contact labels and their values clearly. -->
+            <section class="contact-card" aria-labelledby="contact-details-heading">
+                <h2 id="contact-details-heading">Contact details</h2>
+                <dl>
+                    <div>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+                    </div>
+                    <div>
+                        <dt>Location</dt>
+                        <dd>Helsinki, Finland</dd>
+                    </div>
+                    <div>
+                        <dt>Social</dt>
+                        <dd>@our-schnauzer-family</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <!-- Replace the form action with a real form service before publishing. -->
+            <section class="contact-card" aria-labelledby="message-heading">
+                <h2 id="message-heading">Send a message</h2>
+                <form action="#" method="post">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button class="button" type="submit">Send message</button>
+                </form>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Eco Café</p>
+    <!-- Shared footer used across the site. -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Our Schnauzer Family</p>
+        <a href="index.html">Back to home</a>
     </footer>
 
 </body>

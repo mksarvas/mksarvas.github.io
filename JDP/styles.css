@@ -1,250 +1,496 @@
-/* Reset default browser spacing and use predictable box sizing. */
+:root {
+    /* Winter-inspired colors used throughout the site. */
+    --ink: #30333b;
+    --muted: #626773;
+    --paper: #f4f5f7;
+    --surface: #ffffff;
+    --blue: #c9e2ee;
+    --blue-deep: #315d70;
+    --lavender: #dcd7ed;
+    --pink: #e9cfd5;
+    --line: #d5d9e0;
+    --max-width: 1120px;
+}
+
+/* Use predictable sizing and remove browser default margins. */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-/* Base page typography and colors. */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4fff6;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
-/* Header and navigation. */
-header {
-    background: linear-gradient(to right, #2e8b57, #4aa3df);
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Keep headings visually distinct while retaining a readable body font. */
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
 }
 
-nav {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+h1,
+h2,
+h3,
+.brand {
+    font-family: Univers, "Avenir Next", Arial, sans-serif;
+    line-height: 1.15;
 }
 
-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+h1 {
+    font-size: clamp(2.3rem, 7vw, 4.8rem);
+    letter-spacing: -0.04em;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #ffffff;
-    text-decoration: none;
-    transform: translateY(-3px);
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.7rem);
 }
 
-/* Highlight the link for the page currently being viewed. */
-nav a.active {
-    /* Remove the decorative button background so this state is unmistakable. */
-    background-image: none;
-    background-color: #ffd166;
-    border: 3px solid #ffffff;
-    color: #173f2a;
-    box-shadow: 0 0 0 3px #246b45, 0 5px 12px rgba(0, 0, 0, 0.3);
-    outline: 2px solid #ffd166;
-    outline-offset: 2px;
-    cursor: default;
-    transform: translateY(-2px);
+h3 {
+    font-size: 1.6rem;
 }
 
-/* Main content container. */
-main {
-    padding: 40px;
-    max-width: 1000px;
-    margin: auto;
+/* Link and keyboard-focus states support mouse and keyboard users. */
+a {
+    color: var(--blue-deep);
 }
 
-/* Hero heading and section heading styles. */
-.hero {
-    text-align: center;
+a:hover {
+    color: var(--ink);
 }
 
-.hero h2,
-section h2 {
-    color: #2e8b57;
-    margin-bottom: 20px;
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--pink);
+    outline-offset: 4px;
 }
 
-/* Standard green call-to-action button. */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #2e8b57;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+/* Shared header and responsive navigation. */
+.site-header {
+    background: var(--blue);
+    border-bottom: 1px solid #b6d0dc;
+    padding: 1.25rem 1.25rem 0;
 }
 
-.btn:hover {
-    background-color: #246b45;
-}
-
-/* Menu or content cards. */
-.menu-item {
-    background-color: white;
-    border-left: 5px solid #4aa3df;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 5px;
-}
-
-.menu-item h3 {
-    color: #4aa3df;
-}
-
-.menu-item span {
-    font-weight: bold;
-    color: #2e8b57;
-}
-
-/* List spacing inside the content area. */
-ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-/* Footer layout and links. */
-footer {
-    background-color: #2e8b57;
-    color: white;
-    text-align: center;
-    padding: 20px 15px;
-    margin-top: 30px;
-}
-
-/* Responsive footer content layout. */
-.footer-content {
-    max-width: 1000px;
+.site-header__inner,
+main,
+.site-footer {
+    width: min(100%, var(--max-width));
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
-/* Footer navigation links. */
-.footer-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.footer-links a {
-    color: white;
+.brand {
+    color: var(--ink);
+    display: inline-block;
+    font-size: 1.35rem;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.tagline {
+    color: var(--muted);
+    margin: 0.15rem 0 1rem;
 }
 
-/* Decorative button with a gradient and layered highlights. */
-.btn-124 {
-    font-size: 18px;
-    color: #234b53;
-    background-image: linear-gradient(180deg, #c9c2f0 30%, transparent 70%);
-    background-repeat: no-repeat;
-    background-position: center 45%;
-    background-size: 100% 200%;
-    padding: 15px 28px;
-    border-radius: 20px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 60px 40px -7px;
-    position: relative;
-    transition: all 0.5s ease;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    user-select: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    /*** full width block ***/
-    /* width: 100%; */
-}
-
-/* Button layers used to create the glossy effect. */
-.btn-124::before,
-.btn-124::after {
-    content: "";
-    inset: 0;
-    position: absolute;
-    border-radius: 20px;
-}
-
-/* Inner shadow and reflective highlight. */
-.btn-124::before {
-    background-image: radial-gradient(ellipse, rgba(204, 246, 255, 0.8) 20%, transparent 50%, transparent 200%), linear-gradient(90deg, #404040 -10%, transparent 30%, transparent 70%, #404040 110%);
-    box-shadow: inset 0 0.25em 0.75em rgba(0, 0, 0, 0.8), inset 0 -0.05em 0.2em rgba(255, 255, 255, 0.4), inset 0 -1px 3px rgba(25, 196, 230, 0.75);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: 200% 80%, cover;
-    background-position: center 220%;
-    mix-blend-mode: overlay;
-    filter: blur(0);
-}
-
-/* Top highlight layer. */
-.btn-124::after {
-    background: linear-gradient(180deg, rgba(213, 204, 255, 0.726), rgba(92, 74, 181, 0.75) 40%, transparent 80%);
-    top: 0.075em;
-    left: 0.75em;
-    right: 0.75em;
-    bottom: 1.4em;
-    filter: blur(1px);
-    mix-blend-mode: screen;
-}
-
-/* Lift the decorative button on interaction. */
-.btn-124:hover,
-.btn-124:active,
-.btn-124:focus {
-    outline: none;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    background-position: center calc(45% - 0.75em);
-}
-
-/* Disabled button appearance. */
-.btn-124:disabled {
-    pointer-events: none;
-    opacity: .65;
-    color: #7e7e7e;
-    background: #dcdcdc;
-    text-shadow: none;
-    box-shadow: none;
-}
-
-/* Flex container for navigation links to allow wrapping and spacing. */
-.flex-container {
+.site-nav {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0 -0.5rem;
+}
+
+.site-nav a {
+    border-bottom: 3px solid transparent;
+    color: var(--ink);
+    padding: 0.7rem 0.75rem;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    border-bottom-color: var(--blue-deep);
+}
+
+/* Mobile-first page spacing and introductory sections. */
+main {
+    padding: 2.5rem 1.25rem 4rem;
+}
+
+.hero,
+.page-intro {
+    max-width: 780px;
+    padding: 2rem 0 3rem;
+}
+
+.hero {
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
 }
 
+.hero .intro {
+    font-size: 1.2rem;
+    margin: 0 auto 1.5rem;
+    max-width: 650px;
+}
 
-.flex-item {
-    flex: 1;
-    margin: 5px;
+.page-intro {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-intro h1 {
+    margin-bottom: 1rem;
+}
+
+.page-intro p:last-child {
+    font-size: 1.15rem;
+}
+
+.eyebrow {
+    color: var(--blue-deep);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
+}
+
+/* Primary action styling without animation or decorative effects. */
+.button {
+    background: var(--blue-deep);
+    border: 2px solid var(--blue-deep);
+    color: white;
+    display: inline-block;
+    font-weight: 700;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--ink);
+    color: white;
+}
+
+/* Home page dog cards and supporting callout. */
+.content-section {
+    padding: 2rem 0;
+}
+
+.section-heading {
+    margin-bottom: 1.5rem;
+    max-width: 620px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0.5rem;
+}
+
+.dog-grid,
+.culture-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.dog-card,
+.culture-card,
+.contact-card,
+.info-panel,
+.note-section {
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.dog-card {
+    overflow: hidden;
+}
+
+.dog-card img {
+    background: var(--lavender);
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.dog-card__body {
+    padding: 1.35rem;
+}
+
+.dog-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.dog-meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.split-callout {
+    background: var(--lavender);
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+.split-callout h2 {
+    margin-bottom: 0;
+}
+
+.link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+}
+
+.text-link {
+    font-weight: 700;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+}
+
+/* History page image, article columns, and characteristics panel. */
+.feature-image {
+    margin: 0 auto 3rem;
+    max-width: 900px;
+    text-align: center;
+}
+
+.feature-image img {
+    background: var(--blue);
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.feature-image figcaption {
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding-top: 0.65rem;
+}
+
+.article-layout {
+    display: grid;
+    gap: 2rem;
+}
+
+.article-content {
+    max-width: 720px;
+}
+
+.article-content section+section {
+    border-top: 1px solid var(--line);
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.article-content h2 {
+    margin-bottom: 0.7rem;
+}
+
+.info-panel {
+    padding: 1.5rem;
+}
+
+.info-panel h2 {
+    margin-bottom: 0.8rem;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+.info-panel li+li {
+    margin-top: 0.55rem;
+}
+
+/* Culture page topic cards and responsible-care note. */
+.culture-grid {
+    max-width: 980px;
+    margin: 0 auto 3rem;
+}
+
+.culture-card {
+    padding: 1.35rem;
+}
+
+.culture-card h2 {
+    font-size: 1.55rem;
+    margin-bottom: 0.6rem;
+}
+
+.card-number {
+    color: var(--blue-deep);
+    font-weight: 700;
+}
+
+.note-section {
+    margin: 0 auto;
+    max-width: 820px;
+    padding: 1.5rem;
+}
+
+.note-section h2 {
+    margin-bottom: 0.65rem;
+}
+
+/* Contact details and form share cards that stack on small screens. */
+.contact-layout {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.contact-card {
+    padding: 1.5rem;
+}
+
+.contact-card h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-card dl {
+    margin: 0;
+}
+
+.contact-card dl div {
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.8rem 0;
+}
+
+.contact-card dt {
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.contact-card dd {
+    margin: 0;
+}
+
+/* Form controls use full-width fields and inherit the site's readable type. */
+.form-field {
+    display: grid;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+    background: var(--paper);
+    border: 1px solid #aeb5c0;
+    border-radius: 0;
+    color: var(--ink);
+    font: inherit;
+    padding: 0.7rem;
+    width: 100%;
+}
+
+.form-field textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--blue-deep);
+    outline: 3px solid var(--pink);
+    outline-offset: 2px;
+}
+
+button.button {
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Footer stays flexible when its link wraps on small screens. */
+.site-footer {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem 2rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Tablet layout: introduce two-column card grids and wider spacing. */
+@media (min-width: 640px) {
+    .site-header {
+        padding-inline: 2rem;
+    }
+
+    main {
+        padding: 4rem 2rem 5rem;
+    }
+
+    .site-footer {
+        padding-inline: 2rem;
+    }
+
+    .dog-grid,
+    .culture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .split-callout {
+        grid-template-columns: 1fr 1.4fr;
+        padding: 2rem;
+    }
+
+    .split-callout .link-row {
+        grid-column: 2;
+    }
+
+    .contact-card dl div {
+        grid-template-columns: 8rem 1fr;
+    }
+}
+
+/* Desktop layout: align branding, navigation, and long-form content. */
+@media (min-width: 900px) {
+    .site-header__inner {
+        align-items: center;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .tagline {
+        margin: 0;
+    }
+
+    .site-nav {
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    .article-layout {
+        align-items: start;
+        grid-template-columns: minmax(0, 1fr) 300px;
+    }
+
+    .contact-layout {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    }
+
+    .info-panel {
+        position: sticky;
+        top: 1rem;
+    }
 }

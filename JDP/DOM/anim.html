@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Talvinen mökki</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: grid;
+			place-items: center;
+			padding: 2rem 1rem;
+			background: linear-gradient(#0b1d3a, #2c4a72);
+			color: #fff;
+			font-family: Arial, Helvetica, sans-serif;
+			overflow-x: hidden;
+		}
+
+		main {
+			position: relative;
+			z-index: 1;
+			width: min(100%, 900px);
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0 0 1.5rem;
+			font-size: clamp(2rem, 6vw, 3.5rem);
+			text-shadow: 0 0.2rem 1rem rgb(0 0 0 / 50%);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			border-radius: 1rem;
+			box-shadow: 0 1rem 3rem rgb(0 0 0 / 50%);
+		}
+
+		/* Lumi: kolme kerrosta, joissa on pieniä ja suuria hiutaleita taustakuvioina.
+		   Kerrokset liikkuvat alaspäin eri nopeuksilla, mikä luo syvyysvaikutelman. */
+		.snow {
+			position: fixed;
+			inset: 0;
+			z-index: 2;
+			pointer-events: none;
+			background-repeat: repeat;
+			animation: fall linear infinite;
+		}
+
+		.snow--far {
+			background-image:
+				radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+				radial-gradient(2px 2px at 90px 120px, #fff, transparent),
+				radial-gradient(2px 2px at 160px 60px, #fff, transparent),
+				radial-gradient(2px 2px at 230px 180px, #fff, transparent),
+				radial-gradient(2px 2px at 60px 220px, #fff, transparent),
+				radial-gradient(2px 2px at 270px 100px, #fff, transparent);
+			background-size: 300px 300px;
+			opacity: 0.7;
+			--tile: 300px;
+			animation-duration: 7s;
+		}
+
+		.snow--mid {
+			background-image:
+				radial-gradient(3px 3px at 40px 70px, #fff, transparent),
+				radial-gradient(3px 3px at 150px 20px, #fff, transparent),
+				radial-gradient(3px 3px at 220px 140px, #fff, transparent),
+				radial-gradient(3px 3px at 100px 200px, #fff, transparent),
+				radial-gradient(3px 3px at 280px 250px, #fff, transparent);
+			background-size: 350px 350px;
+			--tile: 350px;
+			animation-duration: 4.5s;
+		}
+
+		.snow--near {
+			background-image:
+				radial-gradient(5px 5px at 80px 50px, #fff, transparent),
+				radial-gradient(5px 5px at 260px 160px, #fff, transparent),
+				radial-gradient(5px 5px at 140px 280px, #fff, transparent),
+				radial-gradient(5px 5px at 380px 330px, #fff, transparent);
+			background-size: 420px 420px;
+			--tile: 420px;
+			animation-duration: 3s;
+		}
+
+		/* Siirto täsmälleen yhden kuvion korkeuden verran, jotta silmukka on saumaton */
+		@keyframes fall {
+			from {
+				background-position: 0 0;
+			}
+
+			to {
+				background-position: 0 var(--tile);
+			}
+		}
+
+		/* Kasaantuva lumi: läpinäkyvä kerros kasvaa pohjasta ylöspäin ja täyttää lopulta koko näytön */
+		.drift {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 3;
+			height: 0;
+			pointer-events: none;
+			background: linear-gradient(rgb(255 255 255 / 85%), rgb(214 228 242 / 70%));
+			animation: pile 120s linear forwards;
+		}
+
+		/* Epäsäännöllinen, pehmeä yläreuna: kaksi eri levyistä aaltoilevaa SVG-kerrosta
+		   luovat syvyyttä, ja kevyt sumennus pehmentää reunan. */
+		.drift::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 100%;
+			height: 3.5rem;
+			margin-bottom: -1px;
+			background:
+				url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 40' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-opacity='0.85' d='M0 20C40 6 80 2 120 12S200 30 260 16 340 0 400 10 520 28 600 20V40H0Z'/%3E%3C/svg%3E") repeat-x bottom / 600px 2.5rem,
+				url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 40' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-opacity='0.4' d='M0 24C70 4 150 10 220 20S360 36 450 18 640 2 720 16 840 30 900 24V40H0Z'/%3E%3C/svg%3E") repeat-x bottom / 900px 3.5rem;
+			filter: blur(1px);
+		}
+
+		@keyframes pile {
+			from {
+				height: 0;
+			}
+
+			to {
+				height: 100vh;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.snow {
+				animation: none;
+			}
+
+			.drift {
+				animation: none;
+				height: 4rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Talvinen mökki</h1>
+		<img src="wintwr.png" alt="Lumen peittämä mökki talvisessa metsässä järven rannalla">
+	</main>
+
+	<div class="snow snow--far" aria-hidden="true"></div>
+	<div class="snow snow--mid" aria-hidden="true"></div>
+	<div class="snow snow--near" aria-hidden="true"></div>
+	<div class="drift" aria-hidden="true"></div>
+</body>
+
+</html>

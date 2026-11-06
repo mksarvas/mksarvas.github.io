@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Seasons</title>
+    <link rel="stylesheet" href="seasons.css">
+    <script src="seasons.js" defer></script>
+</head>
+
+<body class="season--plain">
+    <main class="season-page">
+        <!-- Hero: title, description and image are updated by seasons.js -->
+        <section class="season-hero" aria-labelledby="season-title">
+            <p class="eyebrow">A changing year</p>
+            <h1 id="season-title">Four Seasons</h1>
+            <p id="season-description">Choose a season below to change the look of this page.</p>
+            <img id="season-image" class="season-image" src="summer.png" alt="Summer illustration" hidden>
+        </section>
+
+        <!-- Season picker: submit applies the chosen season, "Back to basics" resets -->
+        <section class="season-picker" aria-labelledby="season-picker-title">
+            <h2 id="season-picker-title">Which season would you like to explore?</h2>
+            <form id="season-form">
+                <fieldset>
+                    <legend>Choose a season</legend>
+                    <div class="season-options">
+                        <label><input type="radio" name="season" value="summer" checked> Summer</label>
+                        <label><input type="radio" name="season" value="autumn"> Fall</label>
+                        <label><input type="radio" name="season" value="winter"> Winter</label>
+                        <label><input type="radio" name="season" value="spring"> Spring</label>
+                    </div>
+                </fieldset>
+                <button type="submit">Change the page</button>
+                <button type="button" id="reset-button">Back to basics</button>
+            </form>
+            <p id="season-status" class="visually-hidden" aria-live="polite"></p>
+        </section>
+
+        <!-- Activities: hidden until a season is chosen -->
+        <section class="season-content" id="season-content" aria-labelledby="activities-title" hidden>
+            <div class="season-icon" id="season-icon" aria-hidden="true">☀</div>
+            <div>
+                <p class="eyebrow" id="season-label">Summer</p>
+                <h2 id="activities-title">Things to enjoy in summer</h2>
+                <ul id="season-activities">
+                    <li>Go swimming</li>
+                    <li>Relax in the sunshine</li>
+                    <li>Play Mölkky with friends</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

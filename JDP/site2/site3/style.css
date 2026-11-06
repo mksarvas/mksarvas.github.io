@@ -1,0 +1,140 @@
+/* Color palette */
+:root {
+    --background: #eef1f5;
+    --light-blue: #cfe8ff;
+    --lavender: #d9cffc;
+    --pink: #f4d6df;
+    --dark-text: #333333;
+    --white: #ffffff;
+}
+
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgreen;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--light-blue);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0066cc;
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--lavender);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Dog cards */
+.dog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.dog-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.dog-card img {
+    width: 100%;
+    display: block;
+}
+
+.dog-card h3,
+.dog-card p {
+    padding: 0 15px;
+}
+
+/* History page */
+.center-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.center-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: var(--light-blue);
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.contact-image {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--pink);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

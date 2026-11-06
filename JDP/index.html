@@ -4,43 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Café - Home</title>
+    <title>Our Schnauzer Family | Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Eco Café</h1>
-        <p>Sustainable Coffee for Students</p>
+    <!-- Shared site header and page navigation. -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html">Our Schnauzer Family</a>
+            <p class="tagline">Small dogs, big personalities</p>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="active" href="index.html" aria-current="page">Home</a>
+                <a href="history.html">History</a>
+                <a href="culture.html">Culture</a>
+                <a href="contact.html">Contact</a>
+        
 
-        <nav class="flex-container">
-            <a class="btn-124 flex-item active" href="index.html">Home</a>
-            <a class="btn-124 flex-item" href="menu.html">Menu</a>
-            <a class="btn-124 flex-item" href="contact.html">Contact</a>
-        </nav>
+            
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Welcome to Eco Café</h2>
-            <p>
-                A cozy, eco-friendly café designed for students.
-                Enjoy organic coffee, healthy snacks, and a relaxed
-                study environment.
-            </p>
+        <!-- Introductory hero section for the family website. -->
+        <section class="hero" aria-labelledby="welcome-heading">
+            <p class="eyebrow">Welcome to our family page</p>
+            <h1 id="welcome-heading">Life with Miniature Schnauzers</h1>
+            <p class="intro">This is a small, friendly introduction to our two Miniature Schnauzers and the breed we
+                love. Explore their personalities, learn about their history, and discover the everyday joys of
+                responsible dog companionship.</p>
+            <a href="#dogs" class="button">Meet the dogs</a>
+        </section>
 
-            <p>
-                We support sustainability through local ingredients,
-                reusable cups, and environmentally friendly practices.
-            </p>
+        <!-- The two family dog profiles are displayed as responsive cards. -->
+        <section class="content-section" id="dogs" aria-labelledby="dogs-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Our companions</p>
+                <h2 id="dogs-heading">Meet our two dogs</h2>
+                <p>Every dog has a unique character. These profiles are ready for the family’s own details and
+                    photographs.</p>
+            </div>
+            <div class="dog-grid">
+                <article class="dog-card">
+                    <img src="images/dog-01.svg"
+                        alt="Illustrated placeholder portrait for the first Miniature Schnauzer" width="640"
+                        height="480">
+                    <div class="dog-card__body">
+                        <p class="eyebrow">Family dog one</p>
+                        <h3>Luna</h3>
+                        <p class="dog-meta"><strong>Born:</strong> 12 May 2020 · Helsinki</p>
+                        <p>Luna is a gentle and curious companion who enjoys quiet walks, close family time, and keeping
+                            an eye on everything happening at home.</p>
+                    </div>
+                </article>
+                <article class="dog-card">
+                    <img src="images/dog-02.svg"
+                        alt="Illustrated placeholder portrait for the second Miniature Schnauzer" width="640"
+                        height="480">
+                    <div class="dog-card__body">
+                        <p class="eyebrow">Family dog two</p>
+                        <h3>Oskar</h3>
+                        <p class="dog-meta"><strong>Born:</strong> 3 September 2022 · Tampere</p>
+                        <p>Oskar is an alert, cheerful Schnauzer with a playful spirit. He loves learning new things and
+                            joining the family on outdoor adventures.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <a href="menu.html" class="btn">View Menu</a>
+        <!-- Links to the educational history and culture pages. -->
+        <section class="split-callout" aria-labelledby="learn-heading">
+            <div>
+                <p class="eyebrow">Learn more</p>
+                <h2 id="learn-heading">A distinctive little breed</h2>
+            </div>
+            <p>Miniature Schnauzers are known for their expressive eyebrows, wiry coat, lively minds, and affectionate
+                family nature. Read about their roots and the culture around living with them.</p>
+            <div class="link-row">
+                <a class="text-link" href="history.html">Read the breed history <span aria-hidden="true">→</span></a>
+                <a class="text-link" href="culture.html">Explore dog culture <span aria-hidden="true">→</span></a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Eco Café</p>
+    <!-- Shared footer used across the site. -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Our Schnauzer Family</p>
+        <a href="contact.html">Contact the family</a>
     </footer>
 
 </body>

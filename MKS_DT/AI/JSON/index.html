@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Määrittää sivun skaalautumaan oikein eri kokoisilla näytöillä. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSON | MKS-DT</title>
+    <!-- Bootstrapin tyylit ja sivun omat tyylit. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <!-- Responsiivinen navigaatio: pienellä näytöllä linkit avautuvat painikkeesta. -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <!-- Sivuston nimi toimii linkkinä etusivulle. -->
+                <a class="navbar-brand fw-semibold" href="../index.html">MKS-DT | AI</a>
+                <!-- Valikkopainike näkyy pienillä näytöillä ja ohjaa alla olevaa valikkoa. -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation" aria-expanded="false" aria-label="Avaa valikko">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Valikon linkit; ms-auto sijoittaa ne navigaation oikeaan reunaan. -->
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Etusivu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../grid.html">Grid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../haitari.html">Haitari</a>
+                        </li>
+                        <!-- Nykyinen sivu merkitään aktiiviseksi ja ruudunlukijalle nykyiseksi sivuksi. -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">JSON</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sivun pääsisältö. Bootstrap-luokat lisäävät reunavälin ja pystysuuntaisen tyhjän tilan. -->
+    <main class="container py-5">
+
+
+
+        <div id="vastaus">Tähän tulee se vastus</div>
+    </main>
+
+    <script>
+        // Haetaan samassa kansiossa oleva JSON-tietue ja välitetään se kerro-funktiolle.
+        fetch("tietue.JSON")
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("JSON-tietueen haku epäonnistui.");
+                }
+                return response.json();
+            })
+            .then(function (tietue) {
+                kerro(tietue);
+            })
+            .catch(function (error) {
+                console.error(error);
+                document.getElementById("vastaus").textContent =
+                    "Tietoja ei pystytty hakemaan. Tarkista, että sivua ajetaan verkkopalvelimelta ja tietue.JSON löytyy.";
+            });
+
+        // Näyttää JSON-tietueen tiedot sivulla.
+        function kerro(obj) {
+            let tiedot = "<h1>" + obj.otsikko + "</h1>";
+            document.getElementById("vastaus").innerHTML = tiedot;
+        }
+    </script>
+
+    <!-- Bootstrapin JavaScript mahdollistaa mobiilivalikon avaamisen ja sulkemisen. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

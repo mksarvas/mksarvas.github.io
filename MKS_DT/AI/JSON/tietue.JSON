@@ -1,0 +1,34 @@
+{
+    "otsikko": "JSON-datan käsittelyä",
+    "kuvaus": "Tällä sivustolle haetaan JSON-muotoista dataa",
+    "kuva": "https://jaakkola.github.io/json/digi.JPG",
+    "opintojakso": {
+        "nimi": "Digitekniikat",
+        "tunnus": "DIG4TA021",
+        "opintopisteet": "5"
+    },
+    "sisalto": [
+        "low-code",
+        "sisällönhallintajärjestelmät",
+        "resposiivinen käyttöliittymä ja komponentit",
+        "tiedon haku julkisista palveluista rest-rajapinnan yli"
+    ],
+    "tekniikat": [
+        {
+            "aihe": "low-code",
+            "linkki": "https://www.weebly.com/"
+        },
+        {
+            "aihe": "wordpress",
+            "linkki": "https://https://wordpress.com/"
+        },
+        {
+            "aihe": "bootstrap",
+            "linkki": "https://getbootstrap.com/"
+        },
+        {
+            "aihe": "JSON",
+            "linkki": "https://www.json.org/json-en.html"
+        }
+    ]
+}

@@ -1,0 +1,222 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17364b;
+    background: #e6f8ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--page-background);
+    color: var(--text-color);
+    transition: background-color 300ms ease, color 300ms ease;
+}
+
+.season-page {
+    width: min(100% - 2rem, 760px);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.season-hero,
+.season-picker,
+.season-content {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 1.25rem;
+    background: var(--card-background);
+    box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 12%);
+}
+
+.season-picker,
+.season-content {
+    margin-top: 1.5rem;
+}
+
+.season-hero {
+    border-top: 0.5rem solid var(--accent-color);
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(2.25rem, 7vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(1.35rem, 4vw, 2rem);
+}
+
+.eyebrow {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Season illustration inside the hero card */
+.season-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.season-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 0.75rem;
+}
+
+.season-options label {
+    padding: 0.75rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+input {
+    accent-color: var(--accent-color);
+}
+
+button {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--accent-color);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button + button {
+    margin-left: 0.75rem;
+}
+
+/* Make the hidden attribute win over display rules such as flex */
+[hidden] {
+    display: none !important;
+}
+
+button:hover,
+button:focus-visible {
+    filter: brightness(0.9);
+}
+
+.season-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.season-icon {
+    display: grid;
+    flex: 0 0 5rem;
+    width: 5rem;
+    height: 5rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+li + li {
+    margin-top: 0.5rem;
+}
+
+/* Hidden on screen but still read by screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Colour themes: the body class set by seasons.js picks one set of variables */
+.season--plain {
+    --page-background: #fff;
+    --card-background: #fff;
+    --text-color: #000;
+    --accent-color: #000;
+}
+
+.season--plain .season-hero,
+.season--plain .season-picker {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.season--plain .season-hero {
+    border-top-width: 1px;
+}
+
+.season--plain .season-picker {
+    border: 1px solid #000;
+}
+
+.season--summer {
+    --page-background: #dff4ff;
+    --card-background: #fffdf3;
+    --text-color: #17364b;
+    --accent-color: #e28413;
+}
+
+.season--autumn {
+    --page-background: #f7e0c2;
+    --card-background: #fffaf3;
+    --text-color: #4a2d16;
+    --accent-color: #ae4b20;
+}
+
+.season--winter {
+    --page-background: #e6f1f8;
+    --card-background: #fbfdff;
+    --text-color: #1f3a5f;
+    --accent-color: #3974a9;
+}
+
+.season--spring {
+    --page-background: #e5f6df;
+    --card-background: #fffdf8;
+    --text-color: #254b2b;
+    --accent-color: #478c45;
+}
+
+@media (max-width: 480px) {
+    .season-page {
+        width: min(100% - 1rem, 760px);
+        padding: 1rem 0;
+    }
+
+    .season-content {
+        flex-direction: column;
+    }
+}
